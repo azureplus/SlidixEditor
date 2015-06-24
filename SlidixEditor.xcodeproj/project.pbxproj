@@ -15,6 +15,11 @@
 		A07BDF4A1B3B18B400DCFA40 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A07BDF491B3B18B400DCFA40 /* Images.xcassets */; };
 		A07BDF4D1B3B18B400DCFA40 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A07BDF4B1B3B18B400DCFA40 /* LaunchScreen.xib */; };
 		A07BDF591B3B18B400DCFA40 /* SlidixEditorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A07BDF581B3B18B400DCFA40 /* SlidixEditorTests.m */; };
+		A07BE0031B3B287900DCFA40 /* Baker in Resources */ = {isa = PBXBuildFile; fileRef = A07BDFFE1B3B287900DCFA40 /* Baker */; };
+		A07BE0041B3B287900DCFA40 /* BakerComponents in Resources */ = {isa = PBXBuildFile; fileRef = A07BDFFF1B3B287900DCFA40 /* BakerComponents */; };
+		A07BE0051B3B287900DCFA40 /* BakerShelf in Resources */ = {isa = PBXBuildFile; fileRef = A07BE0001B3B287900DCFA40 /* BakerShelf */; };
+		A07BE0061B3B287900DCFA40 /* BakerView in Resources */ = {isa = PBXBuildFile; fileRef = A07BE0011B3B287900DCFA40 /* BakerView */; };
+		A07BE0071B3B287900DCFA40 /* books in Resources */ = {isa = PBXBuildFile; fileRef = A07BE0021B3B287900DCFA40 /* books */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +47,11 @@
 		A07BDF521B3B18B400DCFA40 /* SlidixEditorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlidixEditorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A07BDF571B3B18B400DCFA40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A07BDF581B3B18B400DCFA40 /* SlidixEditorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SlidixEditorTests.m; sourceTree = "<group>"; };
+		A07BDFFE1B3B287900DCFA40 /* Baker */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Baker; sourceTree = "<group>"; };
+		A07BDFFF1B3B287900DCFA40 /* BakerComponents */ = {isa = PBXFileReference; lastKnownFileType = folder; path = BakerComponents; sourceTree = "<group>"; };
+		A07BE0001B3B287900DCFA40 /* BakerShelf */ = {isa = PBXFileReference; lastKnownFileType = folder; path = BakerShelf; sourceTree = "<group>"; };
+		A07BE0011B3B287900DCFA40 /* BakerView */ = {isa = PBXFileReference; lastKnownFileType = folder; path = BakerView; sourceTree = "<group>"; };
+		A07BE0021B3B287900DCFA40 /* books */ = {isa = PBXFileReference; lastKnownFileType = folder; path = books; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +75,11 @@
 		A07BDF2D1B3B18B400DCFA40 = {
 			isa = PBXGroup;
 			children = (
+				A07BDFFE1B3B287900DCFA40 /* Baker */,
+				A07BDFFF1B3B287900DCFA40 /* BakerComponents */,
+				A07BE0001B3B287900DCFA40 /* BakerShelf */,
+				A07BE0011B3B287900DCFA40 /* BakerView */,
+				A07BE0021B3B287900DCFA40 /* books */,
 				A07BDF381B3B18B400DCFA40 /* SlidixEditor */,
 				A07BDF551B3B18B400DCFA40 /* SlidixEditorTests */,
 				A07BDF371B3B18B400DCFA40 /* Products */,
@@ -203,7 +218,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A07BDF481B3B18B400DCFA40 /* Main.storyboard in Resources */,
+				A07BE0051B3B287900DCFA40 /* BakerShelf in Resources */,
+				A07BE0061B3B287900DCFA40 /* BakerView in Resources */,
+				A07BE0071B3B287900DCFA40 /* books in Resources */,
 				A07BDF4D1B3B18B400DCFA40 /* LaunchScreen.xib in Resources */,
+				A07BE0031B3B287900DCFA40 /* Baker in Resources */,
+				A07BE0041B3B287900DCFA40 /* BakerComponents in Resources */,
 				A07BDF4A1B3B18B400DCFA40 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,6 +442,7 @@
 				A07BDF5E1B3B18B400DCFA40 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A07BDF5F1B3B18B400DCFA40 /* Build configuration list for PBXNativeTarget "SlidixEditorTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +451,7 @@
 				A07BDF611B3B18B400DCFA40 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
