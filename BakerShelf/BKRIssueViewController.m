@@ -131,11 +131,20 @@
 
     [self.archiveButton setTitle:NSLocalizedString(@"ARCHIVE_TEXT", nil) forState:UIControlStateNormal];
     [self.archiveButton setTitleColor:[UIColor bkrColorWithHexString:[BKRSettings sharedSettings].issuesArchiveButtonColor] forState:UIControlStateNormal];
+    
+  
 
     if ([BKRSettings sharedSettings].isNewsstand) {
         [self.archiveButton addTarget:self action:@selector(archiveButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:self.archiveButton];
     }
+    
+    // SETUP EDIT BUTTON
+    self.editButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.editButton.backgroundColor = [UIColor bkrColorWithHexString:[BKRSettings sharedSettings].issuesArchiveBackgroundColor];
+    
+    [self.editButton setTitle:NSLocalizedString(@"ARCHIVE_TEXT", nil) forState:UIControlStateNormal];
+    [self.editButton setTitleColor:[UIColor bkrColorWithHexString:[BKRSettings sharedSettings].issuesArchiveButtonColor] forState:UIControlStateNormal];
 
     // SETUP DOWN/LOADING SPINNER AND LABEL
     self.spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
@@ -230,8 +239,13 @@
     self.actionButton.titleLabel.font = actionFont;
 
     // SETUP ARCHIVE BUTTON
-    self.archiveButton.frame = CGRectMake(ui.contentOffset + 80 + 10, heightOffset, 80, 30);
+    //self.archiveButton.frame = CGRectMake(ui.contentOffset + 80 + 10, heightOffset, 80, 30);
+    self.archiveButton.frame = CGRectMake(ui.contentOffset , heightOffset, 80, 30);
     self.archiveButton.titleLabel.font = archiveFont;
+    
+    // SETUP ARCHIVE BUTTON
+    //self.editButton.frame = CGRectMake(ui.contentOffset + 80 + 10, heightOffset, 80, 30);
+    //self.editButton.titleLabel.font = archiveFont;
 
     // SETUP DOWN/LOADING SPINNER AND LABEL
     self.spinner.frame = CGRectMake(ui.contentOffset, heightOffset, 30, 30);
@@ -258,13 +272,14 @@
 }
 
 - (void)refresh:(NSString*)status {
-    //NSLog(@"[BakerShelf] Shelf UI - Refreshing %@ item with status from <%@> to <%@>", self.issue.ID, self.currentStatus, status);
+    NSLog(@"[BakerShelf] Shelf UI - Refreshing %@ item with status from <%@> to <%@>", self.issue.ID, self.currentStatus, status);
     if ([status isEqualToString:@"remote"]) {
         [self.actionButton setTitle:NSLocalizedString(@"FREE_TEXT", nil) forState:UIControlStateNormal];
         [self.spinner stopAnimating];
 
         self.actionButton.hidden  = NO;
         self.archiveButton.hidden = YES;
+        //self.editButton.hidden=YES;
         self.progressBar.hidden   = YES;
         self.loadingLabel.hidden  = YES;
     } else if ([status isEqualToString:@"connecting"]) {
@@ -273,6 +288,7 @@
 
         self.actionButton.hidden  = YES;
         self.archiveButton.hidden = YES;
+        //self.editButton.hidden=YES;
         self.progressBar.progress = 0;
         self.loadingLabel.text    = NSLocalizedString(@"CONNECTING_TEXT", nil);
         self.loadingLabel.hidden  = NO;
@@ -283,6 +299,7 @@
 
         self.actionButton.hidden  = YES;
         self.archiveButton.hidden = YES;
+        //self.editButton.hidden=YES;
         self.progressBar.progress = 0;
         self.loadingLabel.text    = NSLocalizedString(@"DOWNLOADING_TEXT", nil);
         self.loadingLabel.hidden  = NO;
@@ -294,14 +311,17 @@
 
         self.actionButton.hidden  = NO;
         self.archiveButton.hidden = NO;
+        //self.editButton.hidden=YES;
         self.loadingLabel.hidden  = YES;
         self.progressBar.hidden   = YES;
     } else if ([status isEqualToString:@"bundled"]) {
         [self.actionButton setTitle:NSLocalizedString(@"ACTION_DOWNLOADED_TEXT", nil) forState:UIControlStateNormal];
         [self.spinner stopAnimating];
 
-        self.actionButton.hidden  = NO;
-        self.archiveButton.hidden = YES;
+        self.actionButton.hidden  = YES;
+        self.archiveButton.hidden = NO;
+        //self.editButton.hidden=NO;
+        NSLog(@"%s","boton de editar");
         self.loadingLabel.hidden  = YES;
         self.progressBar.hidden   = YES;
     } else if ([status isEqualToString:@"opening"]) {
@@ -309,6 +329,7 @@
 
         self.actionButton.hidden  = YES;
         self.archiveButton.hidden = YES;
+        //self.editButton.hidden=YES;
         self.loadingLabel.text    = NSLocalizedString(@"OPENING_TEXT", nil);
         self.loadingLabel.hidden  = NO;
         self.progressBar.hidden   = YES;
@@ -318,6 +339,7 @@
 
         self.actionButton.hidden  = NO;
         self.archiveButton.hidden = YES;
+        //self.editButton.hidden=YES;
         self.progressBar.hidden   = YES;
         self.loadingLabel.hidden  = YES;
     } else if ([status isEqualToString:@"purchasing"]) {
@@ -328,6 +350,7 @@
 
         self.actionButton.hidden  = YES;
         self.archiveButton.hidden = YES;
+        self.editButton.hidden=YES;
         self.progressBar.hidden   = YES;
         self.loadingLabel.hidden  = NO;
     } else if ([status isEqualToString:@"purchased"]) {
@@ -338,6 +361,7 @@
 
         self.actionButton.hidden  = NO;
         self.archiveButton.hidden = YES;
+        //self.editButton.hidden=YES;
         self.progressBar.hidden   = YES;
         self.loadingLabel.hidden  = YES;
     } else if ([status isEqualToString:@"unpriced"]) {
@@ -347,6 +371,7 @@
 
         self.actionButton.hidden  = YES;
         self.archiveButton.hidden = YES;
+        //self.editButton.hidden=YES;
         self.progressBar.hidden   = YES;
         self.loadingLabel.hidden  = NO;
     }

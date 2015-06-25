@@ -43,6 +43,7 @@
 @property (nonatomic, strong) BKRIssue *issue;
 @property (nonatomic, strong) UIButton *actionButton;
 @property (nonatomic, strong) UIButton *archiveButton;
+@property (nonatomic, strong) UIButton *editButton;
 @property (nonatomic, strong) UIProgressView *progressBar;
 @property (nonatomic, strong) UIActivityIndicatorView *spinner;
 @property (nonatomic, strong) UILabel *loadingLabel;
