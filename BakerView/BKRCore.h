@@ -32,6 +32,8 @@
 #ifndef Baker_BKRCore_h
 #define Baker_BKRCore_h
 
+#import <UIKit/UIKit.h>
+
 static inline BOOL BKR_IsEmpty(id thing) {
     return thing == nil || [thing isEqual:[NSNull null]]
     || ([thing respondsToSelector:@selector(length)]

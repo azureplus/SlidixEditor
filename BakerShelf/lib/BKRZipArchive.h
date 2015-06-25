@@ -10,6 +10,8 @@
 #define _BKRZIPARCHIVE_H
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
 #include "minizip/unzip.h"
 
 @protocol BKRZipArchiveDelegate;

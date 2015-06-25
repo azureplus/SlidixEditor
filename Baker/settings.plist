@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>isNewsstand</key>
-	<true/>
+	<false/>
 	<key>newsstandLatestIssueCover</key>
 	<true/>
 	<key>newsstandManifestUrl</key>

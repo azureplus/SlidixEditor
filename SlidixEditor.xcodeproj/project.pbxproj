@@ -15,11 +15,57 @@
 		A07BDF4A1B3B18B400DCFA40 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A07BDF491B3B18B400DCFA40 /* Images.xcassets */; };
 		A07BDF4D1B3B18B400DCFA40 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A07BDF4B1B3B18B400DCFA40 /* LaunchScreen.xib */; };
 		A07BDF591B3B18B400DCFA40 /* SlidixEditorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A07BDF581B3B18B400DCFA40 /* SlidixEditorTests.m */; };
-		A07BE0031B3B287900DCFA40 /* Baker in Resources */ = {isa = PBXBuildFile; fileRef = A07BDFFE1B3B287900DCFA40 /* Baker */; };
-		A07BE0041B3B287900DCFA40 /* BakerComponents in Resources */ = {isa = PBXBuildFile; fileRef = A07BDFFF1B3B287900DCFA40 /* BakerComponents */; };
-		A07BE0051B3B287900DCFA40 /* BakerShelf in Resources */ = {isa = PBXBuildFile; fileRef = A07BE0001B3B287900DCFA40 /* BakerShelf */; };
-		A07BE0061B3B287900DCFA40 /* BakerView in Resources */ = {isa = PBXBuildFile; fileRef = A07BE0011B3B287900DCFA40 /* BakerView */; };
 		A07BE0071B3B287900DCFA40 /* books in Resources */ = {isa = PBXBuildFile; fileRef = A07BE0021B3B287900DCFA40 /* books */; };
+		A0C07C2A1B3BC10900A3F033 /* BakerAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0C07BC51B3BC10900A3F033 /* BakerAssets.xcassets */; };
+		A0C07C2B1B3BC10900A3F033 /* BKRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C07BC71B3BC10900A3F033 /* BKRAppDelegate.m */; };
+		A0C07C2E1B3BC10900A3F033 /* newsstand-app-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A0C07BCB1B3BC10900A3F033 /* newsstand-app-icon.png */; };
+		A0C07C2F1B3BC10900A3F033 /* newsstand-app-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A0C07BCC1B3BC10900A3F033 /* newsstand-app-icon@2x.png */; };
+		A0C07C301B3BC10900A3F033 /* newsstand-app-icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A0C07BCD1B3BC10900A3F033 /* newsstand-app-icon@3x.png */; };
+		A0C07C311B3BC10900A3F033 /* settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = A0C07BCE1B3BC10900A3F033 /* settings.plist */; };
+		A0C07C321B3BC10900A3F033 /* BKRCategoryFilterItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C07BD11B3BC10900A3F033 /* BKRCategoryFilterItem.m */; };
+		A0C07C331B3BC10900A3F033 /* BKRBakerAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C07BD41B3BC10900A3F033 /* BKRBakerAPI.m */; };
+		A0C07C341B3BC10900A3F033 /* BKRCustomNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C07BD61B3BC10900A3F033 /* BKRCustomNavigationBar.m */; };
+		A0C07C351B3BC10900A3F033 /* BKRCustomNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C07BD81B3BC10900A3F033 /* BKRCustomNavigationController.m */; };
+		A0C07C361B3BC10900A3F033 /* BKRIssue.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C07BDA1B3BC10900A3F033 /* BKRIssue.m */; };
+		A0C07C371B3BC10900A3F033 /* BKRIssuesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C07BDC1B3BC10900A3F033 /* BKRIssuesManager.m */; };
+		A0C07C381B3BC10900A3F033 /* BKRIssueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C07BDE1B3BC10900A3F033 /* BKRIssueViewController.m */; };
+		A0C07C391B3BC10900A3F033 /* BKRPurchasesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C07BE01B3BC10900A3F033 /* BKRPurchasesManager.m */; };
+		A0C07C3A1B3BC10900A3F033 /* BKRShelfHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C07BE21B3BC10900A3F033 /* BKRShelfHeaderView.m */; };
+		A0C07C3B1B3BC10900A3F033 /* BKRShelfStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C07BE41B3BC10900A3F033 /* BKRShelfStatus.m */; };
+		A0C07C3C1B3BC10900A3F033 /* BKRShelfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C07BE61B3BC10900A3F033 /* BKRShelfViewController.m */; };
+		A0C07C3D1B3BC10900A3F033 /* info.html in Resources */ = {isa = PBXBuildFile; fileRef = A0C07BE81B3BC10900A3F033 /* info.html */; };
+		A0C07C3E1B3BC10900A3F033 /* made-with-baker.png in Resources */ = {isa = PBXBuildFile; fileRef = A0C07BE91B3BC10900A3F033 /* made-with-baker.png */; };
+		A0C07C3F1B3BC10900A3F033 /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = A0C07BEA1B3BC10900A3F033 /* style.css */; };
+		A0C07C401B3BC10900A3F033 /* BKRReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C07BED1B3BC10900A3F033 /* BKRReachability.m */; };
+		A0C07C411B3BC10900A3F033 /* BKRZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C07BEF1B3BC10900A3F033 /* BKRZipArchive.m */; };
+		A0C07C421B3BC10900A3F033 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C07BF11B3BC10900A3F033 /* MBProgressHUD.m */; };
+		A0C07C431B3BC10900A3F033 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = A0C07BF41B3BC10900A3F033 /* ioapi.c */; };
+		A0C07C441B3BC10900A3F033 /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = A0C07BF61B3BC10900A3F033 /* mztools.c */; };
+		A0C07C451B3BC10900A3F033 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = A0C07BF81B3BC10900A3F033 /* unzip.c */; };
+		A0C07C461B3BC10900A3F033 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = A0C07BFA1B3BC10900A3F033 /* zip.c */; };
+		A0C07C471B3BC10900A3F033 /* NSData+BakerExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C07BFD1B3BC10900A3F033 /* NSData+BakerExtensions.m */; };
+		A0C07C481B3BC10900A3F033 /* NSMutableURLRequest+BakerExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C07BFF1B3BC10900A3F033 /* NSMutableURLRequest+BakerExtensions.m */; };
+		A0C07C491B3BC10900A3F033 /* NSURL+BakerExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C07C011B3BC10900A3F033 /* NSURL+BakerExtensions.m */; };
+		A0C07C4A1B3BC10900A3F033 /* BKRAnalyticsEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C07C041B3BC10900A3F033 /* BKRAnalyticsEvents.m */; };
+		A0C07C4B1B3BC10900A3F033 /* BKRBook.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C07C061B3BC10900A3F033 /* BKRBook.m */; };
+		A0C07C4C1B3BC10900A3F033 /* BKRBookStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C07C081B3BC10900A3F033 /* BKRBookStatus.m */; };
+		A0C07C4D1B3BC10900A3F033 /* BKRBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C07C0A1B3BC10900A3F033 /* BKRBookViewController.m */; };
+		A0C07C4E1B3BC10900A3F033 /* BKRIndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C07C0D1B3BC10900A3F033 /* BKRIndexViewController.m */; };
+		A0C07C4F1B3BC10900A3F033 /* BKRInterceptorWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C07C0F1B3BC10900A3F033 /* BKRInterceptorWindow.m */; };
+		A0C07C501B3BC10900A3F033 /* BKRModalWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C07C111B3BC10900A3F033 /* BKRModalWebViewController.m */; };
+		A0C07C511B3BC10900A3F033 /* BKRSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C07C131B3BC10900A3F033 /* BKRSettings.m */; };
+		A0C07C521B3BC10900A3F033 /* BKRShelfViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C07C151B3BC10900A3F033 /* BKRShelfViewLayout.m */; };
+		A0C07C531B3BC10900A3F033 /* BKRJSONStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C07C181B3BC10900A3F033 /* BKRJSONStatus.m */; };
+		A0C07C541B3BC10900A3F033 /* BKRUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C07C1A1B3BC10900A3F033 /* BKRUtils.m */; };
+		A0C07C551B3BC10900A3F033 /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C07C1D1B3BC10900A3F033 /* GTMNSString+HTML.m */; };
+		A0C07C561B3BC10900A3F033 /* NSObject+BakerExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C07C1F1B3BC10900A3F033 /* NSObject+BakerExtensions.m */; };
+		A0C07C571B3BC10900A3F033 /* NSString+BakerExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C07C211B3BC10900A3F033 /* NSString+BakerExtensions.m */; };
+		A0C07C581B3BC10900A3F033 /* UIColor+BakerExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C07C231B3BC10900A3F033 /* UIColor+BakerExtensions.m */; };
+		A0C07C591B3BC10900A3F033 /* UIScreen+BakerExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C07C251B3BC10900A3F033 /* UIScreen+BakerExtensions.m */; };
+		A0C07C5A1B3BC10900A3F033 /* BKRPageTitleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C07C281B3BC10900A3F033 /* BKRPageTitleLabel.m */; };
+		A0C07C5F1B3BC1C100A3F033 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C07C5C1B3BC19100A3F033 /* UIKit.framework */; };
+		A0C07C611B3BC7DD00A3F033 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C07C601B3BC7DD00A3F033 /* libz.dylib */; };
+		A0C07C651B3BD58200A3F033 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A0C07C631B3BD58200A3F033 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,11 +93,100 @@
 		A07BDF521B3B18B400DCFA40 /* SlidixEditorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlidixEditorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A07BDF571B3B18B400DCFA40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A07BDF581B3B18B400DCFA40 /* SlidixEditorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SlidixEditorTests.m; sourceTree = "<group>"; };
-		A07BDFFE1B3B287900DCFA40 /* Baker */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Baker; sourceTree = "<group>"; };
-		A07BDFFF1B3B287900DCFA40 /* BakerComponents */ = {isa = PBXFileReference; lastKnownFileType = folder; path = BakerComponents; sourceTree = "<group>"; };
-		A07BE0001B3B287900DCFA40 /* BakerShelf */ = {isa = PBXFileReference; lastKnownFileType = folder; path = BakerShelf; sourceTree = "<group>"; };
-		A07BE0011B3B287900DCFA40 /* BakerView */ = {isa = PBXFileReference; lastKnownFileType = folder; path = BakerView; sourceTree = "<group>"; };
 		A07BE0021B3B287900DCFA40 /* books */ = {isa = PBXFileReference; lastKnownFileType = folder; path = books; sourceTree = "<group>"; };
+		A0C07BC41B3BC10900A3F033 /* Baker-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Baker-Prefix.pch"; sourceTree = "<group>"; };
+		A0C07BC51B3BC10900A3F033 /* BakerAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = BakerAssets.xcassets; sourceTree = "<group>"; };
+		A0C07BC61B3BC10900A3F033 /* BKRAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKRAppDelegate.h; sourceTree = "<group>"; };
+		A0C07BC71B3BC10900A3F033 /* BKRAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKRAppDelegate.m; sourceTree = "<group>"; };
+		A0C07BCB1B3BC10900A3F033 /* newsstand-app-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "newsstand-app-icon.png"; sourceTree = "<group>"; };
+		A0C07BCC1B3BC10900A3F033 /* newsstand-app-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "newsstand-app-icon@2x.png"; sourceTree = "<group>"; };
+		A0C07BCD1B3BC10900A3F033 /* newsstand-app-icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "newsstand-app-icon@3x.png"; sourceTree = "<group>"; };
+		A0C07BCE1B3BC10900A3F033 /* settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = settings.plist; sourceTree = "<group>"; };
+		A0C07BD01B3BC10900A3F033 /* BKRCategoryFilterItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKRCategoryFilterItem.h; sourceTree = "<group>"; };
+		A0C07BD11B3BC10900A3F033 /* BKRCategoryFilterItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKRCategoryFilterItem.m; sourceTree = "<group>"; };
+		A0C07BD31B3BC10900A3F033 /* BKRBakerAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKRBakerAPI.h; sourceTree = "<group>"; };
+		A0C07BD41B3BC10900A3F033 /* BKRBakerAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKRBakerAPI.m; sourceTree = "<group>"; };
+		A0C07BD51B3BC10900A3F033 /* BKRCustomNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKRCustomNavigationBar.h; sourceTree = "<group>"; };
+		A0C07BD61B3BC10900A3F033 /* BKRCustomNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKRCustomNavigationBar.m; sourceTree = "<group>"; };
+		A0C07BD71B3BC10900A3F033 /* BKRCustomNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKRCustomNavigationController.h; sourceTree = "<group>"; };
+		A0C07BD81B3BC10900A3F033 /* BKRCustomNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKRCustomNavigationController.m; sourceTree = "<group>"; };
+		A0C07BD91B3BC10900A3F033 /* BKRIssue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKRIssue.h; sourceTree = "<group>"; };
+		A0C07BDA1B3BC10900A3F033 /* BKRIssue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKRIssue.m; sourceTree = "<group>"; };
+		A0C07BDB1B3BC10900A3F033 /* BKRIssuesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKRIssuesManager.h; sourceTree = "<group>"; };
+		A0C07BDC1B3BC10900A3F033 /* BKRIssuesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKRIssuesManager.m; sourceTree = "<group>"; };
+		A0C07BDD1B3BC10900A3F033 /* BKRIssueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKRIssueViewController.h; sourceTree = "<group>"; };
+		A0C07BDE1B3BC10900A3F033 /* BKRIssueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKRIssueViewController.m; sourceTree = "<group>"; };
+		A0C07BDF1B3BC10900A3F033 /* BKRPurchasesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKRPurchasesManager.h; sourceTree = "<group>"; };
+		A0C07BE01B3BC10900A3F033 /* BKRPurchasesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKRPurchasesManager.m; sourceTree = "<group>"; };
+		A0C07BE11B3BC10900A3F033 /* BKRShelfHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKRShelfHeaderView.h; sourceTree = "<group>"; };
+		A0C07BE21B3BC10900A3F033 /* BKRShelfHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKRShelfHeaderView.m; sourceTree = "<group>"; };
+		A0C07BE31B3BC10900A3F033 /* BKRShelfStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKRShelfStatus.h; sourceTree = "<group>"; };
+		A0C07BE41B3BC10900A3F033 /* BKRShelfStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKRShelfStatus.m; sourceTree = "<group>"; };
+		A0C07BE51B3BC10900A3F033 /* BKRShelfViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKRShelfViewController.h; sourceTree = "<group>"; };
+		A0C07BE61B3BC10900A3F033 /* BKRShelfViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKRShelfViewController.m; sourceTree = "<group>"; };
+		A0C07BE81B3BC10900A3F033 /* info.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = info.html; sourceTree = "<group>"; };
+		A0C07BE91B3BC10900A3F033 /* made-with-baker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "made-with-baker.png"; sourceTree = "<group>"; };
+		A0C07BEA1B3BC10900A3F033 /* style.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
+		A0C07BEC1B3BC10900A3F033 /* BKRReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKRReachability.h; sourceTree = "<group>"; };
+		A0C07BED1B3BC10900A3F033 /* BKRReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKRReachability.m; sourceTree = "<group>"; };
+		A0C07BEE1B3BC10900A3F033 /* BKRZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKRZipArchive.h; sourceTree = "<group>"; };
+		A0C07BEF1B3BC10900A3F033 /* BKRZipArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKRZipArchive.m; sourceTree = "<group>"; };
+		A0C07BF01B3BC10900A3F033 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		A0C07BF11B3BC10900A3F033 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		A0C07BF31B3BC10900A3F033 /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
+		A0C07BF41B3BC10900A3F033 /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
+		A0C07BF51B3BC10900A3F033 /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
+		A0C07BF61B3BC10900A3F033 /* mztools.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mztools.c; sourceTree = "<group>"; };
+		A0C07BF71B3BC10900A3F033 /* mztools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mztools.h; sourceTree = "<group>"; };
+		A0C07BF81B3BC10900A3F033 /* unzip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unzip.c; sourceTree = "<group>"; };
+		A0C07BF91B3BC10900A3F033 /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unzip.h; sourceTree = "<group>"; };
+		A0C07BFA1B3BC10900A3F033 /* zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zip.c; sourceTree = "<group>"; };
+		A0C07BFB1B3BC10900A3F033 /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
+		A0C07BFC1B3BC10900A3F033 /* NSData+BakerExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+BakerExtensions.h"; sourceTree = "<group>"; };
+		A0C07BFD1B3BC10900A3F033 /* NSData+BakerExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+BakerExtensions.m"; sourceTree = "<group>"; };
+		A0C07BFE1B3BC10900A3F033 /* NSMutableURLRequest+BakerExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableURLRequest+BakerExtensions.h"; sourceTree = "<group>"; };
+		A0C07BFF1B3BC10900A3F033 /* NSMutableURLRequest+BakerExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableURLRequest+BakerExtensions.m"; sourceTree = "<group>"; };
+		A0C07C001B3BC10900A3F033 /* NSURL+BakerExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+BakerExtensions.h"; sourceTree = "<group>"; };
+		A0C07C011B3BC10900A3F033 /* NSURL+BakerExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+BakerExtensions.m"; sourceTree = "<group>"; };
+		A0C07C031B3BC10900A3F033 /* BKRAnalyticsEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKRAnalyticsEvents.h; sourceTree = "<group>"; };
+		A0C07C041B3BC10900A3F033 /* BKRAnalyticsEvents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKRAnalyticsEvents.m; sourceTree = "<group>"; };
+		A0C07C051B3BC10900A3F033 /* BKRBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKRBook.h; sourceTree = "<group>"; };
+		A0C07C061B3BC10900A3F033 /* BKRBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKRBook.m; sourceTree = "<group>"; };
+		A0C07C071B3BC10900A3F033 /* BKRBookStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKRBookStatus.h; sourceTree = "<group>"; };
+		A0C07C081B3BC10900A3F033 /* BKRBookStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKRBookStatus.m; sourceTree = "<group>"; };
+		A0C07C091B3BC10900A3F033 /* BKRBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKRBookViewController.h; sourceTree = "<group>"; };
+		A0C07C0A1B3BC10900A3F033 /* BKRBookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKRBookViewController.m; sourceTree = "<group>"; };
+		A0C07C0B1B3BC10900A3F033 /* BKRCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKRCore.h; sourceTree = "<group>"; };
+		A0C07C0C1B3BC10900A3F033 /* BKRIndexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKRIndexViewController.h; sourceTree = "<group>"; };
+		A0C07C0D1B3BC10900A3F033 /* BKRIndexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKRIndexViewController.m; sourceTree = "<group>"; };
+		A0C07C0E1B3BC10900A3F033 /* BKRInterceptorWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKRInterceptorWindow.h; sourceTree = "<group>"; };
+		A0C07C0F1B3BC10900A3F033 /* BKRInterceptorWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKRInterceptorWindow.m; sourceTree = "<group>"; };
+		A0C07C101B3BC10900A3F033 /* BKRModalWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKRModalWebViewController.h; sourceTree = "<group>"; };
+		A0C07C111B3BC10900A3F033 /* BKRModalWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKRModalWebViewController.m; sourceTree = "<group>"; };
+		A0C07C121B3BC10900A3F033 /* BKRSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKRSettings.h; sourceTree = "<group>"; };
+		A0C07C131B3BC10900A3F033 /* BKRSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKRSettings.m; sourceTree = "<group>"; };
+		A0C07C141B3BC10900A3F033 /* BKRShelfViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKRShelfViewLayout.h; sourceTree = "<group>"; };
+		A0C07C151B3BC10900A3F033 /* BKRShelfViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKRShelfViewLayout.m; sourceTree = "<group>"; };
+		A0C07C171B3BC10900A3F033 /* BKRJSONStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKRJSONStatus.h; sourceTree = "<group>"; };
+		A0C07C181B3BC10900A3F033 /* BKRJSONStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKRJSONStatus.m; sourceTree = "<group>"; };
+		A0C07C191B3BC10900A3F033 /* BKRUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKRUtils.h; sourceTree = "<group>"; };
+		A0C07C1A1B3BC10900A3F033 /* BKRUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKRUtils.m; sourceTree = "<group>"; };
+		A0C07C1B1B3BC10900A3F033 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		A0C07C1C1B3BC10900A3F033 /* GTMNSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTMNSString+HTML.h"; sourceTree = "<group>"; };
+		A0C07C1D1B3BC10900A3F033 /* GTMNSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTMNSString+HTML.m"; sourceTree = "<group>"; };
+		A0C07C1E1B3BC10900A3F033 /* NSObject+BakerExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+BakerExtensions.h"; sourceTree = "<group>"; };
+		A0C07C1F1B3BC10900A3F033 /* NSObject+BakerExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+BakerExtensions.m"; sourceTree = "<group>"; };
+		A0C07C201B3BC10900A3F033 /* NSString+BakerExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+BakerExtensions.h"; sourceTree = "<group>"; };
+		A0C07C211B3BC10900A3F033 /* NSString+BakerExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+BakerExtensions.m"; sourceTree = "<group>"; };
+		A0C07C221B3BC10900A3F033 /* UIColor+BakerExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+BakerExtensions.h"; sourceTree = "<group>"; };
+		A0C07C231B3BC10900A3F033 /* UIColor+BakerExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+BakerExtensions.m"; sourceTree = "<group>"; };
+		A0C07C241B3BC10900A3F033 /* UIScreen+BakerExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+BakerExtensions.h"; sourceTree = "<group>"; };
+		A0C07C251B3BC10900A3F033 /* UIScreen+BakerExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+BakerExtensions.m"; sourceTree = "<group>"; };
+		A0C07C271B3BC10900A3F033 /* BKRPageTitleLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKRPageTitleLabel.h; sourceTree = "<group>"; };
+		A0C07C281B3BC10900A3F033 /* BKRPageTitleLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKRPageTitleLabel.m; sourceTree = "<group>"; };
+		A0C07C5C1B3BC19100A3F033 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A0C07C601B3BC7DD00A3F033 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		A0C07C641B3BD58200A3F033 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +194,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0C07C611B3BC7DD00A3F033 /* libz.dylib in Frameworks */,
+				A0C07C5F1B3BC1C100A3F033 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,10 +212,8 @@
 		A07BDF2D1B3B18B400DCFA40 = {
 			isa = PBXGroup;
 			children = (
-				A07BDFFE1B3B287900DCFA40 /* Baker */,
-				A07BDFFF1B3B287900DCFA40 /* BakerComponents */,
-				A07BE0001B3B287900DCFA40 /* BakerShelf */,
-				A07BE0011B3B287900DCFA40 /* BakerView */,
+				A0C07C5E1B3BC19800A3F033 /* frameworks */,
+				A0C07C5B1B3BC11D00A3F033 /* Baker */,
 				A07BE0021B3B287900DCFA40 /* books */,
 				A07BDF381B3B18B400DCFA40 /* SlidixEditor */,
 				A07BDF551B3B18B400DCFA40 /* SlidixEditorTests */,
@@ -98,6 +233,7 @@
 		A07BDF381B3B18B400DCFA40 /* SlidixEditor */ = {
 			isa = PBXGroup;
 			children = (
+				A0C07C621B3BD58200A3F033 /* en.lproj */,
 				A07BDF3D1B3B18B400DCFA40 /* AppDelegate.h */,
 				A07BDF3E1B3B18B400DCFA40 /* AppDelegate.m */,
 				A07BDF431B3B18B400DCFA40 /* ViewController.h */,
@@ -135,6 +271,192 @@
 				A07BDF571B3B18B400DCFA40 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A0C07BC21B3BC10900A3F033 /* Baker */ = {
+			isa = PBXGroup;
+			children = (
+				A0C07BC41B3BC10900A3F033 /* Baker-Prefix.pch */,
+				A0C07BC51B3BC10900A3F033 /* BakerAssets.xcassets */,
+				A0C07BC61B3BC10900A3F033 /* BKRAppDelegate.h */,
+				A0C07BC71B3BC10900A3F033 /* BKRAppDelegate.m */,
+				A0C07BCB1B3BC10900A3F033 /* newsstand-app-icon.png */,
+				A0C07BCC1B3BC10900A3F033 /* newsstand-app-icon@2x.png */,
+				A0C07BCD1B3BC10900A3F033 /* newsstand-app-icon@3x.png */,
+				A0C07BCE1B3BC10900A3F033 /* settings.plist */,
+			);
+			path = Baker;
+			sourceTree = "<group>";
+		};
+		A0C07BCF1B3BC10900A3F033 /* BakerComponents */ = {
+			isa = PBXGroup;
+			children = (
+				A0C07BD01B3BC10900A3F033 /* BKRCategoryFilterItem.h */,
+				A0C07BD11B3BC10900A3F033 /* BKRCategoryFilterItem.m */,
+			);
+			path = BakerComponents;
+			sourceTree = "<group>";
+		};
+		A0C07BD21B3BC10900A3F033 /* BakerShelf */ = {
+			isa = PBXGroup;
+			children = (
+				A0C07BD31B3BC10900A3F033 /* BKRBakerAPI.h */,
+				A0C07BD41B3BC10900A3F033 /* BKRBakerAPI.m */,
+				A0C07BD51B3BC10900A3F033 /* BKRCustomNavigationBar.h */,
+				A0C07BD61B3BC10900A3F033 /* BKRCustomNavigationBar.m */,
+				A0C07BD71B3BC10900A3F033 /* BKRCustomNavigationController.h */,
+				A0C07BD81B3BC10900A3F033 /* BKRCustomNavigationController.m */,
+				A0C07BD91B3BC10900A3F033 /* BKRIssue.h */,
+				A0C07BDA1B3BC10900A3F033 /* BKRIssue.m */,
+				A0C07BDB1B3BC10900A3F033 /* BKRIssuesManager.h */,
+				A0C07BDC1B3BC10900A3F033 /* BKRIssuesManager.m */,
+				A0C07BDD1B3BC10900A3F033 /* BKRIssueViewController.h */,
+				A0C07BDE1B3BC10900A3F033 /* BKRIssueViewController.m */,
+				A0C07BDF1B3BC10900A3F033 /* BKRPurchasesManager.h */,
+				A0C07BE01B3BC10900A3F033 /* BKRPurchasesManager.m */,
+				A0C07BE11B3BC10900A3F033 /* BKRShelfHeaderView.h */,
+				A0C07BE21B3BC10900A3F033 /* BKRShelfHeaderView.m */,
+				A0C07BE31B3BC10900A3F033 /* BKRShelfStatus.h */,
+				A0C07BE41B3BC10900A3F033 /* BKRShelfStatus.m */,
+				A0C07BE51B3BC10900A3F033 /* BKRShelfViewController.h */,
+				A0C07BE61B3BC10900A3F033 /* BKRShelfViewController.m */,
+				A0C07BE71B3BC10900A3F033 /* info */,
+				A0C07BEB1B3BC10900A3F033 /* lib */,
+			);
+			path = BakerShelf;
+			sourceTree = "<group>";
+		};
+		A0C07BE71B3BC10900A3F033 /* info */ = {
+			isa = PBXGroup;
+			children = (
+				A0C07BE81B3BC10900A3F033 /* info.html */,
+				A0C07BE91B3BC10900A3F033 /* made-with-baker.png */,
+				A0C07BEA1B3BC10900A3F033 /* style.css */,
+			);
+			path = info;
+			sourceTree = "<group>";
+		};
+		A0C07BEB1B3BC10900A3F033 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				A0C07BEC1B3BC10900A3F033 /* BKRReachability.h */,
+				A0C07BED1B3BC10900A3F033 /* BKRReachability.m */,
+				A0C07BEE1B3BC10900A3F033 /* BKRZipArchive.h */,
+				A0C07BEF1B3BC10900A3F033 /* BKRZipArchive.m */,
+				A0C07BF01B3BC10900A3F033 /* MBProgressHUD.h */,
+				A0C07BF11B3BC10900A3F033 /* MBProgressHUD.m */,
+				A0C07BF21B3BC10900A3F033 /* minizip */,
+				A0C07BFC1B3BC10900A3F033 /* NSData+BakerExtensions.h */,
+				A0C07BFD1B3BC10900A3F033 /* NSData+BakerExtensions.m */,
+				A0C07BFE1B3BC10900A3F033 /* NSMutableURLRequest+BakerExtensions.h */,
+				A0C07BFF1B3BC10900A3F033 /* NSMutableURLRequest+BakerExtensions.m */,
+				A0C07C001B3BC10900A3F033 /* NSURL+BakerExtensions.h */,
+				A0C07C011B3BC10900A3F033 /* NSURL+BakerExtensions.m */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		A0C07BF21B3BC10900A3F033 /* minizip */ = {
+			isa = PBXGroup;
+			children = (
+				A0C07BF31B3BC10900A3F033 /* crypt.h */,
+				A0C07BF41B3BC10900A3F033 /* ioapi.c */,
+				A0C07BF51B3BC10900A3F033 /* ioapi.h */,
+				A0C07BF61B3BC10900A3F033 /* mztools.c */,
+				A0C07BF71B3BC10900A3F033 /* mztools.h */,
+				A0C07BF81B3BC10900A3F033 /* unzip.c */,
+				A0C07BF91B3BC10900A3F033 /* unzip.h */,
+				A0C07BFA1B3BC10900A3F033 /* zip.c */,
+				A0C07BFB1B3BC10900A3F033 /* zip.h */,
+			);
+			path = minizip;
+			sourceTree = "<group>";
+		};
+		A0C07C021B3BC10900A3F033 /* BakerView */ = {
+			isa = PBXGroup;
+			children = (
+				A0C07C031B3BC10900A3F033 /* BKRAnalyticsEvents.h */,
+				A0C07C041B3BC10900A3F033 /* BKRAnalyticsEvents.m */,
+				A0C07C051B3BC10900A3F033 /* BKRBook.h */,
+				A0C07C061B3BC10900A3F033 /* BKRBook.m */,
+				A0C07C071B3BC10900A3F033 /* BKRBookStatus.h */,
+				A0C07C081B3BC10900A3F033 /* BKRBookStatus.m */,
+				A0C07C091B3BC10900A3F033 /* BKRBookViewController.h */,
+				A0C07C0A1B3BC10900A3F033 /* BKRBookViewController.m */,
+				A0C07C0B1B3BC10900A3F033 /* BKRCore.h */,
+				A0C07C0C1B3BC10900A3F033 /* BKRIndexViewController.h */,
+				A0C07C0D1B3BC10900A3F033 /* BKRIndexViewController.m */,
+				A0C07C0E1B3BC10900A3F033 /* BKRInterceptorWindow.h */,
+				A0C07C0F1B3BC10900A3F033 /* BKRInterceptorWindow.m */,
+				A0C07C101B3BC10900A3F033 /* BKRModalWebViewController.h */,
+				A0C07C111B3BC10900A3F033 /* BKRModalWebViewController.m */,
+				A0C07C121B3BC10900A3F033 /* BKRSettings.h */,
+				A0C07C131B3BC10900A3F033 /* BKRSettings.m */,
+				A0C07C141B3BC10900A3F033 /* BKRShelfViewLayout.h */,
+				A0C07C151B3BC10900A3F033 /* BKRShelfViewLayout.m */,
+				A0C07C161B3BC10900A3F033 /* lib */,
+				A0C07C261B3BC10900A3F033 /* ui */,
+			);
+			path = BakerView;
+			sourceTree = "<group>";
+		};
+		A0C07C161B3BC10900A3F033 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				A0C07C171B3BC10900A3F033 /* BKRJSONStatus.h */,
+				A0C07C181B3BC10900A3F033 /* BKRJSONStatus.m */,
+				A0C07C191B3BC10900A3F033 /* BKRUtils.h */,
+				A0C07C1A1B3BC10900A3F033 /* BKRUtils.m */,
+				A0C07C1B1B3BC10900A3F033 /* GTMDefines.h */,
+				A0C07C1C1B3BC10900A3F033 /* GTMNSString+HTML.h */,
+				A0C07C1D1B3BC10900A3F033 /* GTMNSString+HTML.m */,
+				A0C07C1E1B3BC10900A3F033 /* NSObject+BakerExtensions.h */,
+				A0C07C1F1B3BC10900A3F033 /* NSObject+BakerExtensions.m */,
+				A0C07C201B3BC10900A3F033 /* NSString+BakerExtensions.h */,
+				A0C07C211B3BC10900A3F033 /* NSString+BakerExtensions.m */,
+				A0C07C221B3BC10900A3F033 /* UIColor+BakerExtensions.h */,
+				A0C07C231B3BC10900A3F033 /* UIColor+BakerExtensions.m */,
+				A0C07C241B3BC10900A3F033 /* UIScreen+BakerExtensions.h */,
+				A0C07C251B3BC10900A3F033 /* UIScreen+BakerExtensions.m */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		A0C07C261B3BC10900A3F033 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				A0C07C271B3BC10900A3F033 /* BKRPageTitleLabel.h */,
+				A0C07C281B3BC10900A3F033 /* BKRPageTitleLabel.m */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		A0C07C5B1B3BC11D00A3F033 /* Baker */ = {
+			isa = PBXGroup;
+			children = (
+				A0C07BC21B3BC10900A3F033 /* Baker */,
+				A0C07BCF1B3BC10900A3F033 /* BakerComponents */,
+				A0C07BD21B3BC10900A3F033 /* BakerShelf */,
+				A0C07C021B3BC10900A3F033 /* BakerView */,
+			);
+			name = Baker;
+			sourceTree = "<group>";
+		};
+		A0C07C5E1B3BC19800A3F033 /* frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A0C07C601B3BC7DD00A3F033 /* libz.dylib */,
+				A0C07C5C1B3BC19100A3F033 /* UIKit.framework */,
+			);
+			name = frameworks;
+			sourceTree = "<group>";
+		};
+		A0C07C621B3BD58200A3F033 /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				A0C07C631B3BD58200A3F033 /* Localizable.strings */,
+			);
+			path = en.lproj;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,12 +540,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				A07BDF481B3B18B400DCFA40 /* Main.storyboard in Resources */,
-				A07BE0051B3B287900DCFA40 /* BakerShelf in Resources */,
-				A07BE0061B3B287900DCFA40 /* BakerView in Resources */,
+				A0C07C2F1B3BC10900A3F033 /* newsstand-app-icon@2x.png in Resources */,
+				A0C07C301B3BC10900A3F033 /* newsstand-app-icon@3x.png in Resources */,
 				A07BE0071B3B287900DCFA40 /* books in Resources */,
+				A0C07C3E1B3BC10900A3F033 /* made-with-baker.png in Resources */,
+				A0C07C311B3BC10900A3F033 /* settings.plist in Resources */,
+				A0C07C2E1B3BC10900A3F033 /* newsstand-app-icon.png in Resources */,
+				A0C07C3F1B3BC10900A3F033 /* style.css in Resources */,
+				A0C07C3D1B3BC10900A3F033 /* info.html in Resources */,
+				A0C07C651B3BD58200A3F033 /* Localizable.strings in Resources */,
 				A07BDF4D1B3B18B400DCFA40 /* LaunchScreen.xib in Resources */,
-				A07BE0031B3B287900DCFA40 /* Baker in Resources */,
-				A07BE0041B3B287900DCFA40 /* BakerComponents in Resources */,
+				A0C07C2A1B3BC10900A3F033 /* BakerAssets.xcassets in Resources */,
 				A07BDF4A1B3B18B400DCFA40 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,10 +569,49 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0C07C411B3BC10900A3F033 /* BKRZipArchive.m in Sources */,
+				A0C07C3B1B3BC10900A3F033 /* BKRShelfStatus.m in Sources */,
+				A0C07C3C1B3BC10900A3F033 /* BKRShelfViewController.m in Sources */,
+				A0C07C581B3BC10900A3F033 /* UIColor+BakerExtensions.m in Sources */,
+				A0C07C3A1B3BC10900A3F033 /* BKRShelfHeaderView.m in Sources */,
 				A07BDF421B3B18B400DCFA40 /* SlidixEditor.xcdatamodeld in Sources */,
 				A07BDF3F1B3B18B400DCFA40 /* AppDelegate.m in Sources */,
+				A0C07C4D1B3BC10900A3F033 /* BKRBookViewController.m in Sources */,
+				A0C07C5A1B3BC10900A3F033 /* BKRPageTitleLabel.m in Sources */,
+				A0C07C501B3BC10900A3F033 /* BKRModalWebViewController.m in Sources */,
+				A0C07C431B3BC10900A3F033 /* ioapi.c in Sources */,
+				A0C07C391B3BC10900A3F033 /* BKRPurchasesManager.m in Sources */,
+				A0C07C4E1B3BC10900A3F033 /* BKRIndexViewController.m in Sources */,
+				A0C07C421B3BC10900A3F033 /* MBProgressHUD.m in Sources */,
+				A0C07C461B3BC10900A3F033 /* zip.c in Sources */,
+				A0C07C561B3BC10900A3F033 /* NSObject+BakerExtensions.m in Sources */,
+				A0C07C521B3BC10900A3F033 /* BKRShelfViewLayout.m in Sources */,
+				A0C07C511B3BC10900A3F033 /* BKRSettings.m in Sources */,
+				A0C07C591B3BC10900A3F033 /* UIScreen+BakerExtensions.m in Sources */,
+				A0C07C4C1B3BC10900A3F033 /* BKRBookStatus.m in Sources */,
 				A07BDF451B3B18B400DCFA40 /* ViewController.m in Sources */,
+				A0C07C571B3BC10900A3F033 /* NSString+BakerExtensions.m in Sources */,
+				A0C07C531B3BC10900A3F033 /* BKRJSONStatus.m in Sources */,
+				A0C07C471B3BC10900A3F033 /* NSData+BakerExtensions.m in Sources */,
+				A0C07C371B3BC10900A3F033 /* BKRIssuesManager.m in Sources */,
+				A0C07C491B3BC10900A3F033 /* NSURL+BakerExtensions.m in Sources */,
+				A0C07C321B3BC10900A3F033 /* BKRCategoryFilterItem.m in Sources */,
+				A0C07C2B1B3BC10900A3F033 /* BKRAppDelegate.m in Sources */,
+				A0C07C481B3BC10900A3F033 /* NSMutableURLRequest+BakerExtensions.m in Sources */,
+				A0C07C361B3BC10900A3F033 /* BKRIssue.m in Sources */,
+				A0C07C4A1B3BC10900A3F033 /* BKRAnalyticsEvents.m in Sources */,
+				A0C07C4B1B3BC10900A3F033 /* BKRBook.m in Sources */,
+				A0C07C381B3BC10900A3F033 /* BKRIssueViewController.m in Sources */,
+				A0C07C441B3BC10900A3F033 /* mztools.c in Sources */,
+				A0C07C351B3BC10900A3F033 /* BKRCustomNavigationController.m in Sources */,
+				A0C07C541B3BC10900A3F033 /* BKRUtils.m in Sources */,
+				A0C07C4F1B3BC10900A3F033 /* BKRInterceptorWindow.m in Sources */,
+				A0C07C331B3BC10900A3F033 /* BKRBakerAPI.m in Sources */,
 				A07BDF3C1B3B18B400DCFA40 /* main.m in Sources */,
+				A0C07C401B3BC10900A3F033 /* BKRReachability.m in Sources */,
+				A0C07C451B3BC10900A3F033 /* unzip.c in Sources */,
+				A0C07C341B3BC10900A3F033 /* BKRCustomNavigationBar.m in Sources */,
+				A0C07C551B3BC10900A3F033 /* GTMNSString+HTML.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +648,14 @@
 				A07BDF4C1B3B18B400DCFA40 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		A0C07C631B3BD58200A3F033 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A0C07C641B3BD58200A3F033 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
