@@ -289,7 +289,7 @@
 - (BKRIssueViewController*)createIssueViewControllerWithIssue:(BKRIssue*)issue {
     BKRIssueViewController *controller = [[BKRIssueViewController alloc] initWithBakerIssue:issue];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleReadIssue:) name:@"read_issue_request" object:controller];
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleEditIssue:) name:@"edit_issue_request" object:controller];
     return controller;
 }
 
@@ -743,6 +743,10 @@
 {
     BKRIssueViewController *controller = notification.object;
     [self readIssue:controller.issue];
+}
+
+-(void)handleEditIssue:(NSNotification *)notification{
+    NSLog(@"%s","presionado editar!!!" );
 }
 - (void)receiveBookProtocolNotification:(NSNotification*)notification
 {

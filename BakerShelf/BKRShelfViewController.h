@@ -87,6 +87,7 @@
 - (void)receiveBookProtocolNotification:(NSNotification*)notification;
 - (void)handleBookToBeProcessed;
 - (void)pushViewControllerWithBook:(BKRBook*)book;
+- (void)handleEditIssue:(NSNotification *) notification;
 
 #pragma mark - Buttons management
 - (void)setrefreshButtonEnabled:(BOOL)enabled;

@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A07BDF351B3B18B400DCFA40"
-               BuildableName = "SlidixEditor.app"
-               BlueprintName = "SlidixEditor"
-               ReferencedContainer = "container:SlidixEditor.xcodeproj">
+               BuildableName = "SlidyxEditor.app"
+               BlueprintName = "SlidyxEditor"
+               ReferencedContainer = "container:SlidyxEditor.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A07BDF511B3B18B400DCFA40"
-               BuildableName = "SlidixEditorTests.xctest"
-               BlueprintName = "SlidixEditorTests"
-               ReferencedContainer = "container:SlidixEditor.xcodeproj">
+               BuildableName = "SlidyxEditorTests.xctest"
+               BlueprintName = "SlidyxEditorTests"
+               ReferencedContainer = "container:SlidyxEditor.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A07BDF511B3B18B400DCFA40"
-               BuildableName = "SlidixEditorTests.xctest"
-               BlueprintName = "SlidixEditorTests"
-               ReferencedContainer = "container:SlidixEditor.xcodeproj">
+               BuildableName = "SlidyxEditorTests.xctest"
+               BlueprintName = "SlidyxEditorTests"
+               ReferencedContainer = "container:SlidyxEditor.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A07BDF351B3B18B400DCFA40"
-            BuildableName = "SlidixEditor.app"
-            BlueprintName = "SlidixEditor"
-            ReferencedContainer = "container:SlidixEditor.xcodeproj">
+            BuildableName = "SlidyxEditor.app"
+            BlueprintName = "SlidyxEditor"
+            ReferencedContainer = "container:SlidyxEditor.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -77,9 +77,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A07BDF351B3B18B400DCFA40"
-            BuildableName = "SlidixEditor.app"
-            BlueprintName = "SlidixEditor"
-            ReferencedContainer = "container:SlidixEditor.xcodeproj">
+            BuildableName = "SlidyxEditor.app"
+            BlueprintName = "SlidyxEditor"
+            ReferencedContainer = "container:SlidyxEditor.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -96,9 +96,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A07BDF351B3B18B400DCFA40"
-            BuildableName = "SlidixEditor.app"
-            BlueprintName = "SlidixEditor"
-            ReferencedContainer = "container:SlidixEditor.xcodeproj">
+            BuildableName = "SlidyxEditor.app"
+            BlueprintName = "SlidyxEditor"
+            ReferencedContainer = "container:SlidyxEditor.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

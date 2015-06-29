@@ -141,7 +141,7 @@
     self.editButton = [UIButton buttonWithType:UIButtonTypeCustom];
     self.editButton.backgroundColor = [UIColor bkrColorWithHexString:[BKRSettings sharedSettings].issuesArchiveBackgroundColor];
     
-    [self.editButton setTitle:NSLocalizedString(@"ARCHIVE_TEXT", nil) forState:UIControlStateNormal];
+    [self.editButton setTitle:@"EDIT" forState:UIControlStateNormal];
     [self.editButton setTitleColor:[UIColor bkrColorWithHexString:[BKRSettings sharedSettings].issuesArchiveButtonColor] forState:UIControlStateNormal];
     [self.editButton addTarget:self action:@selector(editButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.editButton];
@@ -403,7 +403,8 @@
 }
 
 -(void)editButtonPressed:(UIButton *)sender{
-    
+    NSLog(@"button pressed eidt from issuew view controller");
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"edit_issue_request" object:self];
 }
 - (void)download {
     [self.issue download];

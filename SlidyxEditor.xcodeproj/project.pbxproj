@@ -79,7 +79,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A07BDF361B3B18B400DCFA40 /* SlidixEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlidixEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A07BDF361B3B18B400DCFA40 /* SlidyxEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlidyxEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A07BDF3A1B3B18B400DCFA40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A07BDF3B1B3B18B400DCFA40 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A07BDF3D1B3B18B400DCFA40 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -90,7 +90,7 @@
 		A07BDF471B3B18B400DCFA40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A07BDF491B3B18B400DCFA40 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A07BDF4C1B3B18B400DCFA40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		A07BDF521B3B18B400DCFA40 /* SlidixEditorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlidixEditorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A07BDF521B3B18B400DCFA40 /* SlidyxEditorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlidyxEditorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A07BDF571B3B18B400DCFA40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A07BDF581B3B18B400DCFA40 /* SlidixEditorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SlidixEditorTests.m; sourceTree = "<group>"; };
 		A07BE0021B3B287900DCFA40 /* books */ = {isa = PBXFileReference; lastKnownFileType = folder; path = books; sourceTree = "<group>"; };
@@ -224,8 +224,8 @@
 		A07BDF371B3B18B400DCFA40 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A07BDF361B3B18B400DCFA40 /* SlidixEditor.app */,
-				A07BDF521B3B18B400DCFA40 /* SlidixEditorTests.xctest */,
+				A07BDF361B3B18B400DCFA40 /* SlidyxEditor.app */,
+				A07BDF521B3B18B400DCFA40 /* SlidyxEditorTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -462,9 +462,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A07BDF351B3B18B400DCFA40 /* SlidixEditor */ = {
+		A07BDF351B3B18B400DCFA40 /* SlidyxEditor */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A07BDF5C1B3B18B400DCFA40 /* Build configuration list for PBXNativeTarget "SlidixEditor" */;
+			buildConfigurationList = A07BDF5C1B3B18B400DCFA40 /* Build configuration list for PBXNativeTarget "SlidyxEditor" */;
 			buildPhases = (
 				A07BDF321B3B18B400DCFA40 /* Sources */,
 				A07BDF331B3B18B400DCFA40 /* Frameworks */,
@@ -474,14 +474,14 @@
 			);
 			dependencies = (
 			);
-			name = SlidixEditor;
+			name = SlidyxEditor;
 			productName = SlidixEditor;
-			productReference = A07BDF361B3B18B400DCFA40 /* SlidixEditor.app */;
+			productReference = A07BDF361B3B18B400DCFA40 /* SlidyxEditor.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A07BDF511B3B18B400DCFA40 /* SlidixEditorTests */ = {
+		A07BDF511B3B18B400DCFA40 /* SlidyxEditorTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A07BDF5F1B3B18B400DCFA40 /* Build configuration list for PBXNativeTarget "SlidixEditorTests" */;
+			buildConfigurationList = A07BDF5F1B3B18B400DCFA40 /* Build configuration list for PBXNativeTarget "SlidyxEditorTests" */;
 			buildPhases = (
 				A07BDF4E1B3B18B400DCFA40 /* Sources */,
 				A07BDF4F1B3B18B400DCFA40 /* Frameworks */,
@@ -492,9 +492,9 @@
 			dependencies = (
 				A07BDF541B3B18B400DCFA40 /* PBXTargetDependency */,
 			);
-			name = SlidixEditorTests;
+			name = SlidyxEditorTests;
 			productName = SlidixEditorTests;
-			productReference = A07BDF521B3B18B400DCFA40 /* SlidixEditorTests.xctest */;
+			productReference = A07BDF521B3B18B400DCFA40 /* SlidyxEditorTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -515,7 +515,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A07BDF311B3B18B400DCFA40 /* Build configuration list for PBXProject "SlidixEditor" */;
+			buildConfigurationList = A07BDF311B3B18B400DCFA40 /* Build configuration list for PBXProject "SlidyxEditor" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -528,8 +528,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A07BDF351B3B18B400DCFA40 /* SlidixEditor */,
-				A07BDF511B3B18B400DCFA40 /* SlidixEditorTests */,
+				A07BDF351B3B18B400DCFA40 /* SlidyxEditor */,
+				A07BDF511B3B18B400DCFA40 /* SlidyxEditorTests */,
 			);
 		};
 /* End PBXProject section */
@@ -628,7 +628,7 @@
 /* Begin PBXTargetDependency section */
 		A07BDF541B3B18B400DCFA40 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A07BDF351B3B18B400DCFA40 /* SlidixEditor */;
+			target = A07BDF351B3B18B400DCFA40 /* SlidyxEditor */;
 			targetProxy = A07BDF531B3B18B400DCFA40 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -749,7 +749,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SlidixEditor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SlidyxEditor;
 			};
 			name = Debug;
 		};
@@ -759,7 +759,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SlidixEditor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SlidyxEditor;
 			};
 			name = Release;
 		};
@@ -777,8 +777,8 @@
 				);
 				INFOPLIST_FILE = SlidixEditorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SlidixEditor.app/SlidixEditor";
+				PRODUCT_NAME = SlidyxEditorTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SlidyxEditor.app/SlidyxEditor";
 			};
 			name = Debug;
 		};
@@ -792,15 +792,15 @@
 				);
 				INFOPLIST_FILE = SlidixEditorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SlidixEditor.app/SlidixEditor";
+				PRODUCT_NAME = SlidyxEditorTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SlidyxEditor.app/SlidyxEditor";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A07BDF311B3B18B400DCFA40 /* Build configuration list for PBXProject "SlidixEditor" */ = {
+		A07BDF311B3B18B400DCFA40 /* Build configuration list for PBXProject "SlidyxEditor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A07BDF5A1B3B18B400DCFA40 /* Debug */,
@@ -809,7 +809,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A07BDF5C1B3B18B400DCFA40 /* Build configuration list for PBXNativeTarget "SlidixEditor" */ = {
+		A07BDF5C1B3B18B400DCFA40 /* Build configuration list for PBXNativeTarget "SlidyxEditor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A07BDF5D1B3B18B400DCFA40 /* Debug */,
@@ -818,7 +818,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A07BDF5F1B3B18B400DCFA40 /* Build configuration list for PBXNativeTarget "SlidixEditorTests" */ = {
+		A07BDF5F1B3B18B400DCFA40 /* Build configuration list for PBXNativeTarget "SlidyxEditorTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A07BDF601B3B18B400DCFA40 /* Debug */,
