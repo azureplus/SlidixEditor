@@ -289,6 +289,7 @@
 - (BKRIssueViewController*)createIssueViewControllerWithIssue:(BKRIssue*)issue {
     BKRIssueViewController *controller = [[BKRIssueViewController alloc] initWithBakerIssue:issue];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleReadIssue:) name:@"read_issue_request" object:controller];
+    
     return controller;
 }
 
@@ -728,6 +729,16 @@
         }
     }
 }
+
+-(void)editIsuee:(BKRIssue*)issue{
+    BKRBook *book = nil;
+    
+    if([BKRSettings sharedSettings].isNewsstand){
+        book = [issue bakerBook];
+        [self pushEditViewControllerWithBook:book];
+        
+    }
+}
 - (void)handleReadIssue:(NSNotification*)notification
 {
     BKRIssueViewController *controller = notification.object;
@@ -750,6 +761,11 @@
     self.bookToBeProcessed = nil;
 }
 - (void)pushViewControllerWithBook:(BKRBook*)book
+{
+    BKRBookViewController *bakerViewController = [[BKRBookViewController alloc] initWithBook:book];
+    [self.navigationController pushViewController:bakerViewController animated:YES];
+}
+- (void)pushEditViewControllerWithBook:(BKRBook*)book
 {
     BKRBookViewController *bakerViewController = [[BKRBookViewController alloc] initWithBook:book];
     [self.navigationController pushViewController:bakerViewController animated:YES];

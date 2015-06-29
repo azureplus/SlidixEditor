@@ -132,8 +132,6 @@
     [self.archiveButton setTitle:NSLocalizedString(@"ARCHIVE_TEXT", nil) forState:UIControlStateNormal];
     [self.archiveButton setTitleColor:[UIColor bkrColorWithHexString:[BKRSettings sharedSettings].issuesArchiveButtonColor] forState:UIControlStateNormal];
     
-  
-
     if ([BKRSettings sharedSettings].isNewsstand) {
         [self.archiveButton addTarget:self action:@selector(archiveButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:self.archiveButton];
@@ -145,6 +143,8 @@
     
     [self.editButton setTitle:NSLocalizedString(@"ARCHIVE_TEXT", nil) forState:UIControlStateNormal];
     [self.editButton setTitleColor:[UIColor bkrColorWithHexString:[BKRSettings sharedSettings].issuesArchiveButtonColor] forState:UIControlStateNormal];
+    [self.editButton addTarget:self action:@selector(editButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.editButton];
 
     // SETUP DOWN/LOADING SPINNER AND LABEL
     self.spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
@@ -240,12 +240,12 @@
 
     // SETUP ARCHIVE BUTTON
     //self.archiveButton.frame = CGRectMake(ui.contentOffset + 80 + 10, heightOffset, 80, 30);
-    self.archiveButton.frame = CGRectMake(ui.contentOffset , heightOffset, 80, 30);
+    self.archiveButton.frame = CGRectMake(ui.contentOffset + 80 + 10 , heightOffset, 80, 30);
     self.archiveButton.titleLabel.font = archiveFont;
     
     // SETUP ARCHIVE BUTTON
-    //self.editButton.frame = CGRectMake(ui.contentOffset + 80 + 10, heightOffset, 80, 30);
-    //self.editButton.titleLabel.font = archiveFont;
+    self.editButton.frame = CGRectMake(ui.contentOffset + 80 + 10, heightOffset, 80, 30);
+    self.editButton.titleLabel.font = archiveFont;
 
     // SETUP DOWN/LOADING SPINNER AND LABEL
     self.spinner.frame = CGRectMake(ui.contentOffset, heightOffset, 30, 30);
@@ -279,7 +279,7 @@
 
         self.actionButton.hidden  = NO;
         self.archiveButton.hidden = YES;
-        //self.editButton.hidden=YES;
+        self.editButton.hidden=YES;
         self.progressBar.hidden   = YES;
         self.loadingLabel.hidden  = YES;
     } else if ([status isEqualToString:@"connecting"]) {
@@ -288,7 +288,7 @@
 
         self.actionButton.hidden  = YES;
         self.archiveButton.hidden = YES;
-        //self.editButton.hidden=YES;
+        self.editButton.hidden=YES;
         self.progressBar.progress = 0;
         self.loadingLabel.text    = NSLocalizedString(@"CONNECTING_TEXT", nil);
         self.loadingLabel.hidden  = NO;
@@ -299,7 +299,7 @@
 
         self.actionButton.hidden  = YES;
         self.archiveButton.hidden = YES;
-        //self.editButton.hidden=YES;
+        self.editButton.hidden=YES;
         self.progressBar.progress = 0;
         self.loadingLabel.text    = NSLocalizedString(@"DOWNLOADING_TEXT", nil);
         self.loadingLabel.hidden  = NO;
@@ -311,16 +311,15 @@
 
         self.actionButton.hidden  = NO;
         self.archiveButton.hidden = NO;
-        //self.editButton.hidden=YES;
+        self.editButton.hidden=YES;
         self.loadingLabel.hidden  = YES;
         self.progressBar.hidden   = YES;
     } else if ([status isEqualToString:@"bundled"]) {
         [self.actionButton setTitle:NSLocalizedString(@"ACTION_DOWNLOADED_TEXT", nil) forState:UIControlStateNormal];
         [self.spinner stopAnimating];
-
-        self.actionButton.hidden  = YES;
-        self.archiveButton.hidden = NO;
-        //self.editButton.hidden=NO;
+        self.actionButton.hidden  = NO;
+        self.archiveButton.hidden = YES;
+        self.editButton.hidden=NO;
         NSLog(@"%s","boton de editar");
         self.loadingLabel.hidden  = YES;
         self.progressBar.hidden   = YES;
@@ -329,7 +328,7 @@
 
         self.actionButton.hidden  = YES;
         self.archiveButton.hidden = YES;
-        //self.editButton.hidden=YES;
+        self.editButton.hidden=YES;
         self.loadingLabel.text    = NSLocalizedString(@"OPENING_TEXT", nil);
         self.loadingLabel.hidden  = NO;
         self.progressBar.hidden   = YES;
@@ -339,7 +338,7 @@
 
         self.actionButton.hidden  = NO;
         self.archiveButton.hidden = YES;
-        //self.editButton.hidden=YES;
+        self.editButton.hidden=YES;
         self.progressBar.hidden   = YES;
         self.loadingLabel.hidden  = YES;
     } else if ([status isEqualToString:@"purchasing"]) {
@@ -361,7 +360,7 @@
 
         self.actionButton.hidden  = NO;
         self.archiveButton.hidden = YES;
-        //self.editButton.hidden=YES;
+        self.editButton.hidden=YES;
         self.progressBar.hidden   = YES;
         self.loadingLabel.hidden  = YES;
     } else if ([status isEqualToString:@"unpriced"]) {
@@ -371,7 +370,7 @@
 
         self.actionButton.hidden  = YES;
         self.archiveButton.hidden = YES;
-        //self.editButton.hidden=YES;
+        self.editButton.hidden=YES;
         self.progressBar.hidden   = YES;
         self.loadingLabel.hidden  = NO;
     }
@@ -403,6 +402,9 @@
     }
 }
 
+-(void)editButtonPressed:(UIButton *)sender{
+    
+}
 - (void)download {
     [self.issue download];
 }
