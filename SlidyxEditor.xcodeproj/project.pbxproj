@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A0143D0A1B42F61200820AEC /* BKREditBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0143D091B42F61200820AEC /* BKREditBookViewController.m */; };
+		A04327D01B4C51DF009D8092 /* BookDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A04327CF1B4C51DF009D8092 /* BookDetailsViewController.m */; };
 		A07BDF3C1B3B18B400DCFA40 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A07BDF3B1B3B18B400DCFA40 /* main.m */; };
 		A07BDF3F1B3B18B400DCFA40 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A07BDF3E1B3B18B400DCFA40 /* AppDelegate.m */; };
 		A07BDF421B3B18B400DCFA40 /* SlidixEditor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A07BDF401B3B18B400DCFA40 /* SlidixEditor.xcdatamodeld */; };
@@ -79,6 +81,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A0143D091B42F61200820AEC /* BKREditBookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKREditBookViewController.m; sourceTree = "<group>"; };
+		A04327CA1B4AEDAF009D8092 /* BKREditBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BKREditBookViewController.h; path = ../BakerView/BKREditBookViewController.h; sourceTree = "<group>"; };
+		A04327CE1B4C51DF009D8092 /* BookDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookDetailsViewController.h; sourceTree = "<group>"; };
+		A04327CF1B4C51DF009D8092 /* BookDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookDetailsViewController.m; sourceTree = "<group>"; };
 		A07BDF361B3B18B400DCFA40 /* SlidyxEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlidyxEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A07BDF3A1B3B18B400DCFA40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A07BDF3B1B3B18B400DCFA40 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -233,6 +239,10 @@
 		A07BDF381B3B18B400DCFA40 /* SlidixEditor */ = {
 			isa = PBXGroup;
 			children = (
+				A04327CA1B4AEDAF009D8092 /* BKREditBookViewController.h */,
+				A0143D091B42F61200820AEC /* BKREditBookViewController.m */,
+				A04327CE1B4C51DF009D8092 /* BookDetailsViewController.h */,
+				A04327CF1B4C51DF009D8092 /* BookDetailsViewController.m */,
 				A0C07C621B3BD58200A3F033 /* en.lproj */,
 				A07BDF3D1B3B18B400DCFA40 /* AppDelegate.h */,
 				A07BDF3E1B3B18B400DCFA40 /* AppDelegate.m */,
@@ -570,6 +580,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0C07C411B3BC10900A3F033 /* BKRZipArchive.m in Sources */,
+				A04327D01B4C51DF009D8092 /* BookDetailsViewController.m in Sources */,
 				A0C07C3B1B3BC10900A3F033 /* BKRShelfStatus.m in Sources */,
 				A0C07C3C1B3BC10900A3F033 /* BKRShelfViewController.m in Sources */,
 				A0C07C581B3BC10900A3F033 /* UIColor+BakerExtensions.m in Sources */,
@@ -590,6 +601,7 @@
 				A0C07C591B3BC10900A3F033 /* UIScreen+BakerExtensions.m in Sources */,
 				A0C07C4C1B3BC10900A3F033 /* BKRBookStatus.m in Sources */,
 				A07BDF451B3B18B400DCFA40 /* ViewController.m in Sources */,
+				A0143D0A1B42F61200820AEC /* BKREditBookViewController.m in Sources */,
 				A0C07C571B3BC10900A3F033 /* NSString+BakerExtensions.m in Sources */,
 				A0C07C531B3BC10900A3F033 /* BKRJSONStatus.m in Sources */,
 				A0C07C471B3BC10900A3F033 /* NSData+BakerExtensions.m in Sources */,

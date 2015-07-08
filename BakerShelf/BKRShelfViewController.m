@@ -34,6 +34,7 @@
 #import "BKRCustomNavigationBar.h"
 
 #import "BKRBookViewController.h"
+#import "BKREditBookViewController.h"
 #import "BKRIssueViewController.h"
 #import "BKRShelfHeaderView.h"
 #import "BKRShelfViewLayout.h"
@@ -730,13 +731,13 @@
     }
 }
 
--(void)editIsuee:(BKRIssue*)issue{
+-(void)editIssue:(BKRIssue*)issue{
     BKRBook *book = nil;
+    NSString *status = [issue getStatus];
     
-    if([BKRSettings sharedSettings].isNewsstand){
+    if ([status isEqual:@"bundled"]) {
         book = [issue bakerBook];
         [self pushEditViewControllerWithBook:book];
-        
     }
 }
 - (void)handleReadIssue:(NSNotification*)notification
@@ -747,6 +748,8 @@
 
 -(void)handleEditIssue:(NSNotification *)notification{
     NSLog(@"%s","presionado editar!!!" );
+    BKRIssueViewController *controller = notification.object;
+    [self editIssue:controller.issue];
 }
 - (void)receiveBookProtocolNotification:(NSNotification*)notification
 {
@@ -771,7 +774,7 @@
 }
 - (void)pushEditViewControllerWithBook:(BKRBook*)book
 {
-    BKRBookViewController *bakerViewController = [[BKRBookViewController alloc] initWithBook:book];
+    BKREditBookViewController *bakerViewController = [[BKREditBookViewController alloc] initWithBook:book];
     [self.navigationController pushViewController:bakerViewController animated:YES];
 }
 
