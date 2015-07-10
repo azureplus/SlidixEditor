@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A0143D0A1B42F61200820AEC /* BKREditBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0143D091B42F61200820AEC /* BKREditBookViewController.m */; };
 		A04327D01B4C51DF009D8092 /* BookDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A04327CF1B4C51DF009D8092 /* BookDetailsViewController.m */; };
+		A04327D31B502673009D8092 /* DetailsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A04327D21B502673009D8092 /* DetailsTableViewCell.m */; };
 		A07BDF3C1B3B18B400DCFA40 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A07BDF3B1B3B18B400DCFA40 /* main.m */; };
 		A07BDF3F1B3B18B400DCFA40 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A07BDF3E1B3B18B400DCFA40 /* AppDelegate.m */; };
 		A07BDF421B3B18B400DCFA40 /* SlidixEditor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A07BDF401B3B18B400DCFA40 /* SlidixEditor.xcdatamodeld */; };
@@ -85,6 +86,8 @@
 		A04327CA1B4AEDAF009D8092 /* BKREditBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BKREditBookViewController.h; path = ../BakerView/BKREditBookViewController.h; sourceTree = "<group>"; };
 		A04327CE1B4C51DF009D8092 /* BookDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookDetailsViewController.h; sourceTree = "<group>"; };
 		A04327CF1B4C51DF009D8092 /* BookDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookDetailsViewController.m; sourceTree = "<group>"; };
+		A04327D11B502673009D8092 /* DetailsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsTableViewCell.h; sourceTree = "<group>"; };
+		A04327D21B502673009D8092 /* DetailsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsTableViewCell.m; sourceTree = "<group>"; };
 		A07BDF361B3B18B400DCFA40 /* SlidyxEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlidyxEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A07BDF3A1B3B18B400DCFA40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A07BDF3B1B3B18B400DCFA40 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -243,6 +246,8 @@
 				A0143D091B42F61200820AEC /* BKREditBookViewController.m */,
 				A04327CE1B4C51DF009D8092 /* BookDetailsViewController.h */,
 				A04327CF1B4C51DF009D8092 /* BookDetailsViewController.m */,
+				A04327D11B502673009D8092 /* DetailsTableViewCell.h */,
+				A04327D21B502673009D8092 /* DetailsTableViewCell.m */,
 				A0C07C621B3BD58200A3F033 /* en.lproj */,
 				A07BDF3D1B3B18B400DCFA40 /* AppDelegate.h */,
 				A07BDF3E1B3B18B400DCFA40 /* AppDelegate.m */,
@@ -579,6 +584,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A04327D31B502673009D8092 /* DetailsTableViewCell.m in Sources */,
 				A0C07C411B3BC10900A3F033 /* BKRZipArchive.m in Sources */,
 				A04327D01B4C51DF009D8092 /* BookDetailsViewController.m in Sources */,
 				A0C07C3B1B3BC10900A3F033 /* BKRShelfStatus.m in Sources */,

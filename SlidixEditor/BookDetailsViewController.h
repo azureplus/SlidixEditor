@@ -9,12 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "BKRBook.h"
 
-@interface BookDetailsViewController : UIViewController<UITableViewDataSource>{
+@interface BookDetailsViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>{
         
         NSString *fileName;
         UIScrollView *indexScrollView;
-        UIViewController <UITableViewDelegate> *collectionViewDelegate;
-        UIViewController <UITableViewDataSource> *collectionViewDatasource;
+        UIViewController <UITableViewDelegate> *tableViewDelegate;
+        UIViewController <UITableViewDataSource> *tableViewDatasource;
         UICollectionViewCell *ColectionCell;
     
         int pageY;
@@ -32,7 +32,19 @@
     }
     
     @property (nonatomic, strong) BKRBook *book;
-
-
+- (id)initWithBook:(BKRBook*)bakerBook fileName:(NSString*)name tableViewDelegate:(UIViewController<UITableViewDelegate>*)delegate;
+- (void)loadContent;
+- (void)setPageSizeForOrientation:(UIInterfaceOrientation)orientation;
+- (BOOL)isDisabled;
+- (void)willRotate;
+- (void)rotateFromOrientation:(UIInterfaceOrientation)fromInterfaceOrientation toOrientation:(UIInterfaceOrientation)toInterfaceOrientation;
+//- (void)fadeOut;
+//- (void)fadeIn;
+//- (BOOL)stickToLeft;
+//- (CGSize)sizeFromContentOf:(UIWebView*)webView;
+- (void)setActualSize;
+- (void)adjustIndexView;
+- (void)setViewFrame:(CGRect)frame;
+- (NSString*)indexPath;
 
 @end

@@ -40,6 +40,7 @@
 #import "NSObject+BakerExtensions.h"
 #import "UIScreen+BakerExtensions.h"
 
+
 #define INDEX_FILE_NAME         @"index.html"
 
 #define URL_OPEN_MODALLY        @"referrer=Baker"
@@ -116,7 +117,7 @@
         shouldForceOrientationUpdate = YES;
 
         adjustViewsOnAppDidBecomeActive = NO;
-        _barsHidden = NO;
+        _barsHidden = YES;
 
         webViewBackground = nil;
 
@@ -150,7 +151,7 @@
     self.scrollView.scrollEnabled   = [self.book.bakerPageTurnSwipe boolValue];
     self.scrollView.backgroundColor = [BKRUtils colorWithHexString:self.book.bakerBackground];
 
-    [self.view addSubview:self.scrollView];
+    //[self.view addSubview:self.scrollView];
 
 
     // ****** BAKER BACKGROUND
@@ -176,7 +177,7 @@
     if (!currentPageWillAppearUnderModal) {
 
         [super viewWillAppear:animated];
-        [self.navigationController.navigationBar setTranslucent:YES];
+        [self.navigationController.navigationBar setTranslucent:NO];
 
         // Prevent duplicate observers
         [[NSNotificationCenter defaultCenter] removeObserver:self name:@"notification_touch_intercepted" object:nil];
@@ -208,7 +209,7 @@
 
         if (![self forceOrientationUpdate]) {
             [self willRotateToInterfaceOrientation:self.interfaceOrientation duration:0];
-            [self performSelector:@selector(hideBars:) withObject:@YES afterDelay:0.5];
+            //[self performSelector:@selector(hideBars:) withObject:@YES afterDelay:0.5];
 
             // Condition to make sure we only call startReading the first time this callback is invoked
             // Fixes page reload on coming back from fullscreen video (#611)
@@ -339,17 +340,27 @@
 - (void)startReading {
 
     //[self setPageSize:[self getCurrentInterfaceOrientation:self.interfaceOrientation]];
-    [self buildPageDetails];
+    //[self buildPageDetails];
     //[self updateBookLayout];
 
     // ****** INDEX WEBVIEW INIT
     // we move it here to make it more clear and clean
 
-    if (indexViewController != nil) {
+    //if (indexViewController != nil) {
         // first of all, we need to clean the indexview if it exists.
-        [indexViewController.view removeFromSuperview];
+      //  [indexViewController.view removeFromSuperview];
+    //}
+    //indexViewController = [[BKRIndexViewController alloc] initWithBook:self.book fileName:INDEX_FILE_NAME webViewDelegate:self];
+    
+    if (detailsViewController != nil ) {
+        [detailsViewController.view removeFromSuperview];
     }
-    indexViewController = [[BKRIndexViewController alloc] initWithBook:self.book fileName:INDEX_FILE_NAME webViewDelegate:self];
+    
+    detailsViewController = [[BookDetailsViewController alloc] initWithBook:self.book fileName:INDEX_FILE_NAME tableViewDelegate:self];
+    [self.navigationController.view addSubview:detailsViewController.view];
+    //[self.view sendSubviewToBack:detailsViewController];
+    [detailsViewController loadContent];
+    
     //[self.view addSubview:indexViewController.view];
     //[indexViewController loadContent];
 
@@ -367,7 +378,7 @@
 //        }
 //    }
 
-    [self handlePageLoading];
+    //[self handlePageLoading];
 }
 - (void)buildPageDetails {
     //NSLog(@"[BakerView] Init page details for the book pages");
@@ -1892,6 +1903,13 @@
     } else {
         return NO;
     }
+}
+#pragma mark - TableviewDelegate
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+}
+-(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
 }
 
 @end

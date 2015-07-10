@@ -7,13 +7,18 @@
 //
 
 #import "BookDetailsViewController.h"
+#import "BKRBookViewController.h"
+#import "DetailsTableViewCell.h"
+
+#import "UIScreen+BakerExtensions.h"
 
 @interface BookDetailsViewController ()
 
 @end
 
 @implementation BookDetailsViewController
-- (id)initWithBook:(BKRBook*)bakerBook fileName:(NSString*)name webViewDelegate:(UIViewController<UICollectionViewDelegate>*)delegate {
+
+-(id)initWithBook:(BKRBook*)bakerBook fileName:(NSString*)name tableViewDelegate:(UIViewController<UITableViewDelegate>*)delegate {
     self = [super init];
     if (self) {
         
@@ -31,6 +36,19 @@
     }
     return self;
 }
+-(void)loadView{
+    NSLog(@"loading tableview ...");
+    UITableView *tableview = [[UITableView alloc] init];
+    
+    tableview.dataSource = self;
+    tableview.delegate=self;
+    [tableview registerClass:[DetailsTableViewCell class] forCellReuseIdentifier:@"DetailsCell"];
+    
+    self.view = tableview;
+    [self loadContent];
+    
+    NSLog(@"%lUI", (unsigned long)self.book.contents.count);
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -40,6 +58,55 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (void)loadContent{
+    NSString* path = self.indexPath;
+    
+//    UIWebView *webView = (UIWebView*)self.view;
+//    webView.mediaPlaybackRequiresUserAction = ![self.book.bakerMediaAutoplay boolValue];
+//    [self setBounceForWebView:webView bounces:[self.book.bakerIndexBounce boolValue]];
+//    
+//    //NSLog(@"[IndexView] Path to index view is %@", path);
+//    if ([[NSFileManager defaultManager] fileExistsAtPath:path]) {
+//        disabled = NO;
+//        [(UIWebView *)self.view loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:path]]];
+//    } else {
+//        NSLog(@"[IndexView] Index HTML not found at %@", path);
+//        disabled = YES;
+//    }
+}
+- (void)setPageSizeForOrientation:(UIInterfaceOrientation)orientation{
+    pageWidth  = [[UIScreen mainScreen] bkrWidthForOrientation:orientation];
+    pageHeight = [[UIScreen mainScreen] bkrHeightForOrientation:orientation];
+    NSLog(@"[IndexView] Set IndexView size to %dx%d", pageWidth, pageHeight);
+}
+- (BOOL)isDisabled{
+    return disabled;
+}
+- (void)willRotate{
+    //[self fadeOut];
+}
+- (void)rotateFromOrientation:(UIInterfaceOrientation)fromInterfaceOrientation toOrientation:(UIInterfaceOrientation)toInterfaceOrientation{
+    [self setPageSizeForOrientation:toInterfaceOrientation];
+    [self setActualSize];
+    //[self setIndexViewHidden:hidden withAnimation:NO];
+    //[self fadeIn];
+}
+- (void)setActualSize{
+    actualIndexWidth  = MIN(indexWidth, pageWidth);
+    actualIndexHeight = MIN(indexHeight, pageHeight);
+}
+- (void)adjustIndexView{
+    [self setPageSizeForOrientation:[UIApplication sharedApplication].statusBarOrientation];
+    [self setActualSize];
+    //[self setIndexViewHidden:self.isIndexViewHidden withAnimation:NO];
+}
+- (void)setViewFrame:(CGRect)frame{
+    self.view.frame = frame;
+    indexScrollView.contentSize = cachedContentSize;
+}
+- (NSString*)indexPath{
+    return [self.book.path stringByAppendingPathComponent:fileName];
 }
 
 /*
@@ -51,15 +118,16 @@
     // Pass the selected object to the new view controller.
 }
 */
-#pragma mark - CollectionViewDatasource
--(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
+#pragma mark - table view data source
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
 }
--(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)sectioncollectionView{
-    return 0;
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 1;
 }
--(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    UICollectionViewCell *cell = [[UICollectionViewCell alloc] init];
+-(DetailsTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    DetailsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DetailsCell" forIndexPath:indexPath];
+    cell.contentName.text=@"test Content";
     return cell;
 }
 

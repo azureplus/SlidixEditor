@@ -38,9 +38,11 @@
 #import "BKRBook.h"
 #import "BKRBookStatus.h"
 
+#import "BookDetailsViewController.h"
+
 @class Downloader;
 
-@interface BKREditBookViewController : UIViewController <UIWebViewDelegate, UIScrollViewDelegate, MFMailComposeViewControllerDelegate, BKRModalWebViewControllerDelegate> {
+@interface BKREditBookViewController : UIViewController <UITableViewDelegate, UIScrollViewDelegate, MFMailComposeViewControllerDelegate, BKRModalWebViewControllerDelegate> {
 
     CGRect screenBounds;
 
@@ -105,7 +107,8 @@
 
     BKRIndexViewController *indexViewController;
     BKRModalWebViewController *myModalViewController;
-
+    BookDetailsViewController *detailsViewController;
+    
     BKRBookStatus *bookStatus;
 }
 
