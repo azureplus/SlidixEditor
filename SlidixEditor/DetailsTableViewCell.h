@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface DetailsTableViewCell : UITableViewCell
+{
+    NSString *reuseID;
+}
 
 @property(strong, nonatomic) UILabel *contentName;
 

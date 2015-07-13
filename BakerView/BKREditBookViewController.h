@@ -38,11 +38,11 @@
 #import "BKRBook.h"
 #import "BKRBookStatus.h"
 
-#import "BookDetailsViewController.h"
+#import "DetailsTableViewCell.h"
 
 @class Downloader;
 
-@interface BKREditBookViewController : UIViewController <UITableViewDelegate, UIScrollViewDelegate, MFMailComposeViewControllerDelegate, BKRModalWebViewControllerDelegate> {
+@interface BKREditBookViewController : UIViewController <UITableViewDelegate, UITableViewDataSource> {
 
     CGRect screenBounds;
 
@@ -82,32 +82,32 @@
     BOOL adjustViewsOnAppDidBecomeActive;
 
     //UIScrollView *scrollView;
-    UIWebView *prevPage;
+    //UIWebView *prevPage;
     //UIWebView *currPage;
-    UIWebView *nextPage;
+    //UIWebView *nextPage;
 
-    UIColor *webViewBackground;
+    //UIColor *webViewBackground;
 
-    CGRect upTapArea;
-    CGRect downTapArea;
-    CGRect leftTapArea;
-    CGRect rightTapArea;
+    //CGRect upTapArea;
+    //CGRect downTapArea;
+    //CGRect leftTapArea;
+    //CGRect rightTapArea;
 
-    int totalPages;
-    int lastPageNumber;
+    //int totalPages;
+    //int lastPageNumber;
     //int currentPageNumber;
 
     int pageWidth;
     int pageHeight;
     int currentPageHeight;
 
-    NSString *URLDownload;
-    Downloader *downloader;
-    UIAlertView *feedbackAlert;
+    //NSString *URLDownload;
+    //Downloader *downloader;
+    //UIAlertView *feedbackAlert;
 
-    BKRIndexViewController *indexViewController;
-    BKRModalWebViewController *myModalViewController;
-    BookDetailsViewController *detailsViewController;
+    //BKRIndexViewController *indexViewController;
+    //BKRModalWebViewController *myModalViewController;
+    //BookDetailsViewController *detailsViewController;
     
     BKRBookStatus *bookStatus;
 }
@@ -115,10 +115,12 @@
 #pragma mark - Properties
 
 @property (nonatomic, strong) BKRBook *book;
-@property (nonatomic, strong) UIScrollView *scrollView;
-@property (nonatomic, strong) UIWebView *currPage;
+//@property (nonatomic, strong) UIScrollView *scrollView;
+//@property (nonatomic, strong) UIWebView *currPage;
 
-@property (nonatomic, assign) int currentPageNumber;
+//@property (nonatomic, assign) int currentPageNumber;
+@property (strong,nonatomic)  UITableView *indexTableView;
+@property (strong,nonatomic) UIView *detailsView;
 @property (nonatomic, assign) BOOL barsHidden;
 
 #pragma mark - Initialization
@@ -141,54 +143,6 @@
 - (void)setupWebView:(UIWebView*)webView;
 - (void)removeWebViewDoubleTapGestureRecognizer:(UIView*)view;
 
-#pragma mark - Loading
-
-- (BOOL)changePage:(int)page;
-- (void)gotoPageDelayer;
-- (void)gotoPage;
-- (void)lockPage:(NSNumber*)lock;
-- (void)addPageLoading:(int)slot;
-- (void)handlePageLoading;
-- (void)loadSlot:(int)slot withPage:(int)page;
-- (BOOL)loadWebView:(UIWebView*)webview withPage:(int)page;
-
-#pragma mark - Modal Webview
-
-- (void)loadModalWebView:(NSURL*)url;
-- (void)closeModalWebView;
-
-#pragma mark - Scroll View
-
-- (CGRect)frameForPage:(int)page;
-
-#pragma mark - UIWebViewDelegate
-
-- (void)webView:(UIWebView*)webView hidden:(BOOL)status animating:(BOOL)animating;
-- (void)webViewDidAppear:(UIWebView*)webView animating:(BOOL)animating;
-- (void)webView:(UIWebView*)webView setCorrectOrientation:(UIInterfaceOrientation)interfaceOrientation;
-
-#pragma mark - Screenshots
-
-- (void)removeScreenshots;
-- (void)updateScreenshots;
-- (BOOL)checkScreeshotForPage:(int)pageNumber andOrientation:(NSString*)interfaceOrientation;
-- (void)takeScreenshotFromView:(UIWebView*)webView forPage:(int)pageNumber andOrientation:(NSString*)interfaceOrientation;
-- (void)placeScreenshotForView:(UIWebView*)webView andPage:(int)pageNumber andOrientation:(NSString*)interfaceOrientation;
-
-#pragma mark - UIGestureRecognizer
-
-- (void)handleInterceptedTouch:(NSNotification*)notification;
-- (void)userDidTap:(UITouch*)touch;
-- (void)userDidScroll:(UITouch*)touch;
-
-#pragma mark - Page Scrolling
-
-- (void)setCurrentPageHeight;
-- (int)getCurrentPageOffset;
-- (void)scrollUpCurrentPage:(int)offset animating:(BOOL)animating;
-- (void)scrollDownCurrentPage:(int)offset animating:(BOOL)animating;
-- (void)scrollPage:(UIWebView*)webView to:(NSString*)offset animating:(BOOL)animating;
-- (void)handleAnchor:(BOOL)animating;
 
 #pragma mark - Navigation Bars
 

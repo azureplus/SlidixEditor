@@ -37,22 +37,27 @@
     return self;
 }
 -(void)loadView{
-    NSLog(@"loading tableview ...");
-    UITableView *tableview = [[UITableView alloc] init];
-    
-    tableview.dataSource = self;
-    tableview.delegate=self;
-    [tableview registerClass:[DetailsTableViewCell class] forCellReuseIdentifier:@"DetailsCell"];
-    
-    self.view = tableview;
-    [self loadContent];
-    
-    NSLog(@"%lUI", (unsigned long)self.book.contents.count);
+
+    NSLog(@"%lU", (unsigned long)self.book.contents.count);
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    NSLog(@"loading tableview ...");
+    UITableView *tableview = [[UITableView alloc] init];
+    
+    tableview.dataSource = self;
+    tableview.delegate=self;
+    tableview.separatorStyle=UITableViewCellSeparatorStyleSingleLine;
+    tableview.backgroundColor= [UIColor blueColor];
+    
+    [tableview registerClass:[DetailsTableViewCell class] forCellReuseIdentifier:@"DetailsCell"];
+    [tableview reloadData];
+    
+    [self.view addSubview:tableview];
+    
+    //[self loadContent];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -127,7 +132,12 @@
 }
 -(DetailsTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     DetailsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DetailsCell" forIndexPath:indexPath];
+    if(cell == nil){
+       cell =  [cell initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"DetailsCell"];
+    }
     cell.contentName.text=@"test Content";
+    cell.contentName.textColor=[UIColor blueColor];
+    
     return cell;
 }
 
