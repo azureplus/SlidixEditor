@@ -141,6 +141,9 @@
     
     //details View
     _detailsView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, (self.view.frame.size.height/2)) ];
+    [_detailsView setBackgroundColor:[UIColor whiteColor]];
+    [self initDetailsView];
+    [self.view addSubview:_detailsView];
     
     // ****** Table View
     _indexTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, _detailsView.frame.size.height, self.view.frame.size.width, (self.view.frame.size.height/2)-54) style:UITableViewStylePlain];
@@ -525,6 +528,24 @@
     } else {
         return NO;
     }
+}
+
+#pragma Mark - DETAILS
+-(void)initDetailsView{
+    labelhpub = [[UILabel alloc] initWithFrame:CGRectMake(0, 0 , self.view.frame.size.width, 30)];
+    labelhpub.text=[[self.book.bookData objectForKey:@"hpub"] stringValue];
+    [_detailsView addSubview:labelhpub];
+    labeltitle.text=[self.book.bookData objectForKey:@"title"];
+    labeldate.text=[self.book.bookData objectForKey:@"date"];
+   labelauthor.text=[self.book.bookData objectForKey:@"author"];
+    labelcreators.text=[self.book.bookData objectForKey:@"creator"];
+    labelcategories.text=[self.book.bookData objectForKey:@"categories"];
+    labelpublisher.text=[self.book.bookData objectForKey:@"publisher"];
+    labelurl.text=[self.book.bookData objectForKey:@"url"];
+    labelcover.text=[self.book.bookData objectForKey:@"cover"];
+    labelorientation.text=[self.book.bookData objectForKey:@"orientations"];
+    labelID.text=[self.book.bookData objectForKey:@"ID"];
+
 }
 
 #pragma mark - MEMORY

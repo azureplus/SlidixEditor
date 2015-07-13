@@ -109,6 +109,19 @@
     //BKRModalWebViewController *myModalViewController;
     //BookDetailsViewController *detailsViewController;
     
+    /*details*/
+    UILabel *labelhpub;
+    UILabel *labeltitle;
+    UILabel *labeldate;
+    UILabel *labelauthor;
+    UILabel *labelcreators;
+    UILabel *labelcategories;
+    UILabel *labelpublisher;
+    UILabel *labelurl;
+    UILabel *labelcover;
+    UILabel *labelorientation;
+    UILabel *labelID;
+    
     BKRBookStatus *bookStatus;
 }
 
