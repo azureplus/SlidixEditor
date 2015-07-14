@@ -130,9 +130,13 @@
     return self;
 }
 - (void)viewDidLoad {
-
+    //star editing as false
+    editing = false;
+    
     [super viewDidLoad];
     self.navigationItem.title = self.book.title;
+    self.navigationItem.rightBarButtonItem =[[UIBarButtonItem alloc] initWithTitle:@"Editar" style:UIBarButtonItemStyleDone target:self action:@selector(buttonEdit:)];
+    
     
     
     // ****** SET THE INITIAL SIZE FOR EVERYTHING
@@ -150,7 +154,6 @@
     [_indexTableView registerClass:[DetailsTableViewCell class] forCellReuseIdentifier:@"DetailsCell"];
     _indexTableView.dataSource= self;
     _indexTableView.delegate=self;
-    [_indexTableView setEditing:YES];
     //_indexTableView.backgroundColor= [UIColor blueColor];
     
     [self.view addSubview:_indexTableView];
@@ -530,44 +533,196 @@
     }
 }
 
-#pragma Mark - DETAILS
+#pragma mark - DETAILS
 -(void)initDetailsView{
+
+    [[_detailsView subviews] makeObjectsPerformSelector:@selector(removeFromSuperview)];
     
-    labelhpub = [[UILabel alloc] initWithFrame:CGRectMake(0, 0 , self.view.frame.size.width/2, 30)];
+    //hpub
+    UILabel *hpubtitle =[[UILabel alloc] initWithFrame:CGRectMake(0, 0 , self.view.frame.size.width/2, 30)];
+    hpubtitle.text=@"HPUB: ";
+    [_detailsView addSubview:hpubtitle];
+    
+    labelhpub = [[UILabel alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2, 0 , self.view.frame.size.width/2, 30)];
     labelhpub.text=[[self.book.bookData objectForKey:@"hpub"] stringValue];
     [_detailsView addSubview:labelhpub];
     
-    labeltitle = [[UILabel alloc] initWithFrame:CGRectMake(0, 30 , self.view.frame.size.width/2, 30)];
+    //title
+    UILabel *titletitle =[[UILabel alloc] initWithFrame:CGRectMake(0, 30 , self.view.frame.size.width/2, 30)];
+    titletitle.text=@"Titulo: ";
+    [_detailsView addSubview:titletitle];
+    
+    labeltitle = [[UILabel alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2, 30 , self.view.frame.size.width/2, 30)];
     labeltitle.text=[self.book.bookData objectForKey:@"title"];
     [_detailsView addSubview:labeltitle];
     
-    labeldate = [[UILabel alloc] initWithFrame:CGRectMake(0, 60 , self.view.frame.size.width/2, 30)];
+    //date
+    UILabel *datetitle =[[UILabel alloc] initWithFrame:CGRectMake(0, 60 , self.view.frame.size.width/2, 30)];
+    datetitle.text=@"Fecha: ";
+    [_detailsView addSubview:datetitle];
+    
+    labeldate = [[UILabel alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2, 60 , self.view.frame.size.width/2, 30)];
     labeldate.text=[self.book.bookData objectForKey:@"date"];
     [_detailsView addSubview:labeldate];
     
-    labelauthor = [[UILabel alloc] initWithFrame:CGRectMake(0, 90 , self.view.frame.size.width/2, 30)];
+    //author
+    UILabel *athtitle =[[UILabel alloc] initWithFrame:CGRectMake(0, 90 , self.view.frame.size.width/2, 30)];
+    athtitle.text=@"Autor(es): ";
+    [_detailsView addSubview:athtitle];
+    
+    labelauthor = [[UILabel alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2, 90 , self.view.frame.size.width/2, 30)];
     NSString *tmpatr = [[self.book.bookData objectForKey:@"author"] componentsJoinedByString: @", "];
     labelauthor.text= tmpatr;
     [_detailsView addSubview:labelauthor];
     
-    labelcreators = [[UILabel alloc] initWithFrame:CGRectMake(0, 120 , self.view.frame.size.width, 30)];
+    //creators
+    UILabel *creatitle =[[UILabel alloc] initWithFrame:CGRectMake(0, 120 , self.view.frame.size.width/2, 30)];
+    creatitle.text=@"Creador(es): ";
+    [_detailsView addSubview:creatitle];
+    
+    labelcreators = [[UILabel alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2, 120 , self.view.frame.size.width/2, 30)];
     NSString *tmpcreate = [[self.book.bookData objectForKey:@"creator"] componentsJoinedByString: @", "];
+    labelcreators.lineBreakMode= NSLineBreakByWordWrapping;
+    labelcreators.numberOfLines=0;
     labelcreators.text = tmpcreate;
+    [labelcreators sizeToFit];
     [_detailsView addSubview:labelcreators];
     
     //labelcategories.text=[self.book.bookData objectForKey:@"categories"];
     //labelpublisher.text=[self.book.bookData objectForKey:@"publisher"];
-    labelurl = [[UILabel alloc] initWithFrame:CGRectMake(0, 150 , self.view.frame.size.width, 30)];
+    
+    //url
+    UILabel *urltitle =[[UILabel alloc] initWithFrame:CGRectMake(0, 120+labelcreators.frame.size.height , self.view.frame.size.width/2, 30)];
+    urltitle.text=@"URL: ";
+    [_detailsView addSubview:urltitle];
+    
+    labelurl = [[UILabel alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2, 120+labelcreators.frame.size.height , self.view.frame.size.width/2, 30)];
     labelurl.text=[self.book.bookData objectForKey:@"url"];
+    labelurl.lineBreakMode = NSLineBreakByCharWrapping;
+    labelurl.numberOfLines=0;
+    [labelurl sizeToFit];
     [_detailsView addSubview:labelurl];
     
-    labelcover = [[UILabel alloc] initWithFrame:CGRectMake(0, 180 , self.view.frame.size.width, 30)];
+    float newy= labelurl.frame.origin.y+labelurl.frame.size.height;
+    //cover
+    UILabel *covertitle =[[UILabel alloc] initWithFrame:CGRectMake(0, newy , self.view.frame.size.width/2, 30)];
+    covertitle.text=@"Cover: ";
+    [_detailsView addSubview:covertitle];
+    
+    labelcover = [[UILabel alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2, newy, self.view.frame.size.width/2, 30)];
     labelcover.text=[self.book.bookData objectForKey:@"cover"];
     [_detailsView addSubview:labelcover];
     
     //labelorientation.text=[self.book.bookData objectForKey:@"orientations"];
     //labelID.text=[self.book.bookData objectForKey:@"ID"];
 
+}
+
+-(void)starEditDetails{
+    [[_detailsView subviews] makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    //hpub
+    UILabel *hpubtitle =[[UILabel alloc] initWithFrame:CGRectMake(0, 0 , self.view.frame.size.width/2, 30)];
+    hpubtitle.text=@"HPUB: ";
+    [_detailsView addSubview:hpubtitle];
+    
+    UITextField *fielhpub = [[UITextField alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2, 0 , self.view.frame.size.width/2, 30)];
+    fielhpub.text=[[self.book.bookData objectForKey:@"hpub"] stringValue];
+    [_detailsView addSubview:fielhpub];
+    
+//    //title
+    UILabel *titletitle =[[UILabel alloc] initWithFrame:CGRectMake(0, 30 , self.view.frame.size.width/2, 30)];
+    titletitle.text=@"Titulo: ";
+    [_detailsView addSubview:titletitle];
+    
+    UITextField *fieldtitle = [[UITextField alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2, 30 , self.view.frame.size.width/2, 30)];
+    fieldtitle.text=[self.book.bookData objectForKey:@"title"];
+    [_detailsView addSubview:fieldtitle];
+//
+//    //date
+    UILabel *datetitle =[[UILabel alloc] initWithFrame:CGRectMake(0, 60 , self.view.frame.size.width/2, 30)];
+    datetitle.text=@"Fecha: ";
+    [_detailsView addSubview:datetitle];
+    
+    UITextField *fielddate = [[UITextField alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2, 60 , self.view.frame.size.width/2, 30)];
+    fielddate.text=[self.book.bookData objectForKey:@"date"];
+    [_detailsView addSubview:fielddate];
+    
+//    //author
+    UILabel *athtitle =[[UILabel alloc] initWithFrame:CGRectMake(0, 90 , self.view.frame.size.width/2, 30)];
+    athtitle.text=@"Autor(es): ";
+    [_detailsView addSubview:athtitle];
+    
+    UITextField *fieldauthor = [[UITextField alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2, 90 , self.view.frame.size.width/2, 30)];
+    NSString *tmpatr = [[self.book.bookData objectForKey:@"author"] componentsJoinedByString: @", "];
+    fieldauthor.text= tmpatr;
+    [_detailsView addSubview:fieldauthor];
+    
+//    //creators
+    UILabel *creatitle =[[UILabel alloc] initWithFrame:CGRectMake(0, 120 , self.view.frame.size.width/2, 30)];
+    creatitle.text=@"Creador(es): ";
+    [_detailsView addSubview:creatitle];
+    
+    UITextField *fieldcreators = [[UITextField alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2, 120 , self.view.frame.size.width/2, labelcreators.frame.size.height)];
+    NSString *tmpcreate = [[self.book.bookData objectForKey:@"creator"] componentsJoinedByString: @", "];
+    //fieldcreators.lineBreakMode= NSLineBreakByWordWrapping;
+    //fieldcreators.numberOfLines=0;
+    fieldcreators.text = tmpcreate;
+    //[fieldcreators sizeToFit];
+    [_detailsView addSubview:fieldcreators];
+//
+//    //labelcategories.text=[self.book.bookData objectForKey:@"categories"];
+//    //labelpublisher.text=[self.book.bookData objectForKey:@"publisher"];
+//
+//    //url
+    UILabel *urltitle =[[UILabel alloc] initWithFrame:CGRectMake(0, 120+labelcreators.frame.size.height , self.view.frame.size.width/2, 30)];
+    urltitle.text=@"URL: ";
+    [_detailsView addSubview:urltitle];
+    
+    UITextField *fieldurl = [[UITextField alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2, 120+labelcreators.frame.size.height , self.view.frame.size.width/2, 30)];
+    fieldurl.text=[self.book.bookData objectForKey:@"url"];
+    //fieldurl.lineBreakMode = NSLineBreakByCharWrapping;
+    //fieldurl.numberOfLines=0;
+    //[fieldurl sizeToFit];
+    [_detailsView addSubview:fieldurl];
+//
+    float newy= fieldurl.frame.origin.y+labelurl.frame.size.height;
+//    //cover
+    UILabel *covertitle =[[UILabel alloc] initWithFrame:CGRectMake(0, newy , self.view.frame.size.width/2, 30)];
+    covertitle.text=@"Cover: ";
+    [_detailsView addSubview:covertitle];
+    
+    UITextField *fieldcover = [[UITextField alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2, newy, self.view.frame.size.width/2, 30)];
+    fieldcover.text=[self.book.bookData objectForKey:@"cover"];
+    [_detailsView addSubview:fieldcover];
+//
+//    //labelorientation.text=[self.book.bookData objectForKey:@"orientations"];
+//    //labelID.text=[self.book.bookData objectForKey:@"ID"];
+    
+}
+
+-(void)SaveEditedBook{
+    //self.view
+    UIAlertView *saveAlert = [[UIAlertView alloc] initWithTitle:@"Guardar" message:@"Se guardara la publicacion en un nuevo directoria dentro del bundle" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+    [saveAlert show];
+}
+
+-(IBAction)buttonEdit:(id)sender{
+    NSLog(@"edit button triggered");
+    editing = !editing;
+    if(editing){
+        NSLog(@"Editar activado");
+        [self starEditDetails];
+        [_indexTableView setEditing:YES animated:YES];
+        self.navigationItem.rightBarButtonItem.title=@"Hecho";
+        
+    }
+    else{
+        NSLog(@"Editar desactivado");
+        [self SaveEditedBook];
+        [self initDetailsView];
+        [_indexTableView setEditing:NO animated:NO];
+        self.navigationItem.rightBarButtonItem.title=@"Editar";
+    }
 }
 
 #pragma mark - MEMORY

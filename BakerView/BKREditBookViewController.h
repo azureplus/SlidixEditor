@@ -122,6 +122,8 @@
     UILabel *labelorientation;
     UILabel *labelID;
     
+    BOOL *editing;
+    
     BKRBookStatus *bookStatus;
 }
 
