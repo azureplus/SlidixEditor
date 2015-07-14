@@ -532,19 +532,41 @@
 
 #pragma Mark - DETAILS
 -(void)initDetailsView{
-    labelhpub = [[UILabel alloc] initWithFrame:CGRectMake(0, 0 , self.view.frame.size.width, 30)];
+    
+    labelhpub = [[UILabel alloc] initWithFrame:CGRectMake(0, 0 , self.view.frame.size.width/2, 30)];
     labelhpub.text=[[self.book.bookData objectForKey:@"hpub"] stringValue];
     [_detailsView addSubview:labelhpub];
+    
+    labeltitle = [[UILabel alloc] initWithFrame:CGRectMake(0, 30 , self.view.frame.size.width/2, 30)];
     labeltitle.text=[self.book.bookData objectForKey:@"title"];
+    [_detailsView addSubview:labeltitle];
+    
+    labeldate = [[UILabel alloc] initWithFrame:CGRectMake(0, 60 , self.view.frame.size.width/2, 30)];
     labeldate.text=[self.book.bookData objectForKey:@"date"];
-   labelauthor.text=[self.book.bookData objectForKey:@"author"];
-    labelcreators.text=[self.book.bookData objectForKey:@"creator"];
-    labelcategories.text=[self.book.bookData objectForKey:@"categories"];
-    labelpublisher.text=[self.book.bookData objectForKey:@"publisher"];
+    [_detailsView addSubview:labeldate];
+    
+    labelauthor = [[UILabel alloc] initWithFrame:CGRectMake(0, 90 , self.view.frame.size.width/2, 30)];
+    NSString *tmpatr = [[self.book.bookData objectForKey:@"author"] componentsJoinedByString: @", "];
+    labelauthor.text= tmpatr;
+    [_detailsView addSubview:labelauthor];
+    
+    labelcreators = [[UILabel alloc] initWithFrame:CGRectMake(0, 120 , self.view.frame.size.width, 30)];
+    NSString *tmpcreate = [[self.book.bookData objectForKey:@"creator"] componentsJoinedByString: @", "];
+    labelcreators.text = tmpcreate;
+    [_detailsView addSubview:labelcreators];
+    
+    //labelcategories.text=[self.book.bookData objectForKey:@"categories"];
+    //labelpublisher.text=[self.book.bookData objectForKey:@"publisher"];
+    labelurl = [[UILabel alloc] initWithFrame:CGRectMake(0, 150 , self.view.frame.size.width, 30)];
     labelurl.text=[self.book.bookData objectForKey:@"url"];
+    [_detailsView addSubview:labelurl];
+    
+    labelcover = [[UILabel alloc] initWithFrame:CGRectMake(0, 180 , self.view.frame.size.width, 30)];
     labelcover.text=[self.book.bookData objectForKey:@"cover"];
-    labelorientation.text=[self.book.bookData objectForKey:@"orientations"];
-    labelID.text=[self.book.bookData objectForKey:@"ID"];
+    [_detailsView addSubview:labelcover];
+    
+    //labelorientation.text=[self.book.bookData objectForKey:@"orientations"];
+    //labelID.text=[self.book.bookData objectForKey:@"ID"];
 
 }
 
