@@ -704,7 +704,46 @@
     //self.view
     UIAlertView *saveAlert = [[UIAlertView alloc] initWithTitle:@"Guardar" message:@"Se guardara la publicacion en un nuevo directoria dentro del bundle" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
     [saveAlert show];
+    //copiamos el contenido del book completo, sin cambios
+    [self DuplicateBook:self.book];
+    
+    
 }
+
+-(void)DuplicateBook:(BKRBook *)book{
+        NSFileManager *fileManager = [NSFileManager defaultManager];
+        NSError *error;
+        //path for documents directory
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString *documentsDirectory = [paths objectAtIndex:0];
+        NSString *originalBookPath = book.path;
+        NSString *documentDBFolderPath = [documentsDirectory stringByAppendingPathComponent:@"books"];
+    
+        NSString *NewBookDBFolderPath = [book.path stringByAppendingString:@"_edited"];
+    
+        //NSString *resourceDBFolderPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"books"];
+//        
+//        if (![fileManager fileExistsAtPath:documentDBFolderPath]) {
+//            //Create Directory!
+//            [fileManager createDirectoryAtPath:documentDBFolderPath withIntermediateDirectories:NO attributes:nil error:&error];
+//        } else {
+//            NSLog(@"Directory exists! %@", documentDBFolderPath);
+//        }
+//        
+//        NSArray *fileList = [fileManager contentsOfDirectoryAtPath:resourceDBFolderPath error:&error];
+//        for (NSString *s in fileList) {
+//            NSString *newFilePath = [documentDBFolderPath stringByAppendingPathComponent:s];
+//            NSString *oldFilePath = [resourceDBFolderPath stringByAppendingPathComponent:s];
+//            if (![fileManager fileExistsAtPath:newFilePath]) {
+//                //File does not exist, copy it
+//                [fileManager copyItemAtPath:oldFilePath toPath:newFilePath error:&error];
+//            } else {
+//                NSLog(@"File exists: %@", newFilePath);
+//            }
+//        }
+}
+    
+
 
 -(IBAction)buttonEdit:(id)sender{
     NSLog(@"edit button triggered");

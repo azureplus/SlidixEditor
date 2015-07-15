@@ -37,7 +37,8 @@
     //if ([BKRSettings sharedSettings].isNewsstand) {
     //    [self configureNewsstandApp:application options:launchOptions];
     //} else {
-        [self configureStandAloneApp:application options:launchOptions];
+    [self configureDocumentsFolderLibrary];
+    [self configureStandAloneApp:application options:launchOptions];
     //}
     
     self.rootNavigationController = [[BKRCustomNavigationController alloc] initWithRootViewController:self.rootViewController];
@@ -52,6 +53,46 @@
     
     return YES;
 }
+
+#pragma mark - send Books to documents folder
+-(void)configureDocumentsFolderLibrary{
+        NSFileManager *fileManager = [NSFileManager defaultManager];
+        NSError *error;
+        //path for documents directory
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString *documentsDirectory = [paths objectAtIndex:0];
+        NSString *documentDBFolderPath = [documentsDirectory stringByAppendingPathComponent:@"books"];
+    
+        NSString *resourceDBFolderPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"books"];
+        
+        if (![fileManager fileExistsAtPath:documentDBFolderPath]) {
+            //Create Directory!
+            [fileManager createDirectoryAtPath:documentDBFolderPath withIntermediateDirectories:NO attributes:nil error:&error];
+        } else {
+            NSLog(@"Directory exists! %@", documentDBFolderPath);
+        }
+        
+        NSArray *fileList = [fileManager contentsOfDirectoryAtPath:resourceDBFolderPath error:&error];
+        for (NSString *s in fileList) {
+            NSString *newFilePath = [documentDBFolderPath stringByAppendingPathComponent:s];
+            NSString *oldFilePath = [resourceDBFolderPath stringByAppendingPathComponent:s];
+            if (![fileManager fileExistsAtPath:newFilePath]) {
+                //File does not exist, copy it
+                [fileManager copyItemAtPath:oldFilePath toPath:newFilePath error:&error];
+            } else {
+                NSLog(@"File exists: %@", newFilePath);
+            }
+        }
+}
+
+
+- (BOOL)fileManager:(NSFileManager *)fileManager shouldProceedAfterError:(NSError *)error copyingItemAtPath:(NSString *)srcPath toPath:(NSString *)dstPath{
+    if ([error code] == 516) //error code for: The operation couldn’t be completed. File exists
+        return YES;
+    else
+        return NO;
+}
+
 
 - (void)configureNewsstandApp:(UIApplication*)application options:(NSDictionary*)launchOptions {
     

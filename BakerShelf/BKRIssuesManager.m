@@ -221,13 +221,18 @@
 + (NSArray*)localBooksList {
     NSMutableArray *booksList       = [NSMutableArray array];
     NSFileManager *localFileManager = [NSFileManager defaultManager];
-    NSString *booksDir              = [[NSBundle mainBundle] pathForResource:@"books" ofType:nil];
+    //NSString *booksDir              = [[NSBundle mainBundle] pathForResource:@"books" ofType:nil];
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *documentDBFolderPath = [documentsDirectory stringByAppendingPathComponent:@"books"];
+    
+    
 
-    NSArray *dirContents = [localFileManager contentsOfDirectoryAtPath:booksDir error:nil];
+    NSArray *dirContents = [localFileManager contentsOfDirectoryAtPath:documentDBFolderPath error:nil];
     for (NSString *file in dirContents) {
-        NSString *manifestFile = [booksDir stringByAppendingPathComponent:[file stringByAppendingPathComponent:@"book.json"]];
+        NSString *manifestFile = [documentDBFolderPath stringByAppendingPathComponent:[file stringByAppendingPathComponent:@"book.json"]];
         if ([localFileManager fileExistsAtPath:manifestFile]) {
-            BKRBook *book = [[BKRBook alloc] initWithBookPath:[booksDir stringByAppendingPathComponent:file] bundled:YES];
+            BKRBook *book = [[BKRBook alloc] initWithBookPath:[documentDBFolderPath stringByAppendingPathComponent:file] bundled:YES];
             if (book) {
                 BKRIssue *issue = [[BKRIssue alloc] initWithBakerBook:book];
                 [booksList addObject:issue];
